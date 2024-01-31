@@ -22,6 +22,17 @@ module mux_4_1
   output logic [3:0] y
 );
 
+always_comb
+  case(sel)
+
+    2'b00 : y <= d0;
+    2'b01 : y <= d1;
+    2'b10 : y <= d2;
+    2'b11 : y <= d3;
+
+  endcase
+
+
   // TODO
 
   // Using code for mux_2_1 as an example,

@@ -19,9 +19,22 @@ module mux_4_1
 (
   input        [3:0] d0, d1, d2, d3,
   input        [1:0] sel,
+
   output logic [3:0] y
 );
-
+always @(sel,d0,d1,d2,d3) 
+ begin
+     if( sel == 00 ) 
+   y = d0;
+     if( sel == 01 )
+   y = d1;
+  
+     if( sel == 10 ) 
+   y = d2;
+  
+     if( sel == 11 ) 
+   y = d3;
+  end
   // TODO
 
   // Using code for mux_2_1 as an example,
