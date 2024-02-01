@@ -5,12 +5,13 @@ module mux_2_1
   output logic [3:0] y
 );
 
-  always_comb
+  always  @ (d0,d1,sel)
+   begin
     if (sel)
       y = d1;
     else
       y = d0;
-
+    end
 endmodule
 
 //----------------------------------------------------------------------------
