@@ -4,7 +4,6 @@ module mux_2_1
   input              sel,
   output logic [3:0] y
 );
-
   always  @ (d0,d1,sel)
    begin
     if (sel)
@@ -13,41 +12,30 @@ module mux_2_1
       y = d0;
     end
 endmodule
-
 //----------------------------------------------------------------------------
-
 module mux_4_1
 (
   input        [3:0] d0, d1, d2, d3,
   input        [1:0] sel,
-
   output logic [3:0] y
 );
-always @(sel,d0,d1,d2,d3) 
- begin
-     if( sel == 00 ) 
+always_comb
+begin 
+    if( sel == 2'b00 ) 
    y = d0;
-     if( sel == 01 )
-   y = d1;
-  
-     if( sel == 10 ) 
+     else if( sel == 2'b01 )
+   y = d1; 
+     else if( sel == 2'b10 ) 
    y = d2;
-  
-     if( sel == 11 ) 
-   y = d3;
-  end
+     else
+       y = d3;
+end
   // TODO
-
   // Using code for mux_2_1 as an example,
   // write code for 4:1 mux using the "if" statement
-
-
 endmodule
-
 //----------------------------------------------------------------------------
-
 module testbench;
-
   logic [3:0] d0, d1, d2, d3;
   logic [1:0] sel;
   logic [3:0] y;
@@ -58,7 +46,6 @@ module testbench;
     .sel (sel),
     .y   (y)
   );
-
   task test
     (
       input [3:0] td0, td1, td2, td3,
