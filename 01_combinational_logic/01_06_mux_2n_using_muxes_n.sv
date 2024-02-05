@@ -13,14 +13,14 @@ module mux_4_1
   input  [1:0] sel,
   output [3:0] y
 );
-logic [3:0] y0;
-logic [3:0] y2; 
-        inst_0 (.d0 (d0), .d1(d1),.y (y0), .sel()),
+wire [3:0] y0;
+wire [3:0] y2;
+// instantiating similar module                                             
+mux_2_1 inst_0 (.d0 (d0), .d1(d1),.y (y0), .sel()),   
 
-        inst_1 (.d2 (d0), .d3(d1),.y (y1). .sel ()),
-
-        inst_2 (.y0(d0), .y1(d1), .y(y), .sel());
-
+        inst_1 (.d0 (d2), .d1(d3),.y (y1), .sel ());                           
+     //   inst_2 (.y0(d0), .y1(d1), .y(y), .sel(sel));                         
+       assign y = sel ? y0 : y1;
 // TODO
   // Implement mux_4_1 using three instances of mux_2_1
 endmodule
