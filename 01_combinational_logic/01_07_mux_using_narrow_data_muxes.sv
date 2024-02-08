@@ -19,6 +19,12 @@ module mux_4_1
   output [3:0] y
 );
 
+// similar instances of mux_4_1_width_2
+
+mux_4_1_width_2 inst_0 (.d0(d0), .d1(d1), .d2(d2), .sel(sel), .y(y)),
+                inst_1 (.d0(d0), .d1(d1), .d2(d2), .sel(sel), .y(y));
+
+
   // TODO
 
   // Implement mux_4_1 with 4-bit data

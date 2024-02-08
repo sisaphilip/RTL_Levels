@@ -15,8 +15,7 @@ module mux_2_1_width_2
 );
   // { 2 { a } } is the same as { a, a }
   // { 4 { a } } is the same as { a, a, a, a }
-  assign y =   (d0 & { 2 { ~ sel }})
-             | (d1 & { 2 {   sel }});
+  assign y =   (d0 & { 2 { ~ sel }}) | (d1 & { 2 {   sel }});
 endmodule
 //----------------------------------------------------------------------------
 module mux_4_1_width_1
@@ -30,10 +29,7 @@ module mux_4_1_width_1
   wire sel2 = ~ sel [0] &   sel [1];
   wire sel3 =   sel [0] &   sel [1];
 
-  assign y =   (d0 & sel0)
-             | (d1 & sel1)
-             | (d2 & sel2)
-             | (d3 & sel3);
+  assign y =   (d0 & sel0)| (d1 & sel1)| (d2 & sel2) | (d3 & sel3);
 endmodule
 //----------------------------------------------------------------------------
 module mux_4_1
@@ -42,42 +38,31 @@ module mux_4_1
   input  [1:0] sel,
   output [3:0] y
 );
+  wire sel0 = {2'b00 , (~ sel [0] & ~ sel [1])};
+  wire sel1 = {2'b00 , (  sel [0] & ~ sel [1])};
+  wire sel2 = {2'b00 , (~ sel [0] &   sel [1])};
+  wire sel3 = {2'b00 , (  sel [0] &   sel [1])};
+ 
+  assign y =  (d0 & sel0) | (d1 & sel1)| (d2 & sel2) | (d3 & sel3);
+  
 
-
-  wire sel0 =   sel [0] & ~ sel [1];
-  wire sel1 =   sel [0] &   sel [1];
-  wire sel2 = ~ sel [0] & ~ sel [1];
-  wire sel3 = ~ sel [0] &   sel [1];
-
-  assign y =   (d0 & sel0)
-             | (d1 & sel1)
-             | (d2 & sel2)
-             | (d3 & sel3);
   // TODO
-
   // Using code for mux_2_1_width_1, mux_2_1_width_2,
   // mux_4_1_width_1 as examples,
   // write code for 4:1 mux using only &, | and ~ operations,
   // and possibly some wire continuous assignments.
-
-
 endmodule
-
 //----------------------------------------------------------------------------
-
 module testbench;
-
   logic [3:0] d0, d1, d2, d3;
   logic [1:0] sel;
   logic [3:0] y;
-
   mux_4_1 inst
   (
     .d0  (d0), .d1 (d1), .d2 (d2), .d3 (d3),
     .sel (sel),
     .y   (y)
   );
-
   task test
     (
       input [3:0] td0, td1, td2, td3,
