@@ -18,15 +18,21 @@ module mux_4_1
   input  [1:0] sel,
   output [3:0] y
 );
+  
+
+wire [2:0] y_0;
+wire [2:0] y_2;
 
 // similar instances of mux_4_1_width_2
 
-mux_4_1_width_2 inst_0 (.d0(d0), .d1(d1), .d2(d2), .sel(sel), .y(y)),
-                inst_1 (.d0(d0), .d1(d1), .d2(d2), .sel(sel), .y(y));
+mux_4_1_width_2 inst_0 (.d0(d0 [1:0]), .d1(d1 [1:0]), .d2(d2 [1:0]), .d3(d3 [1:0]), .sel(sel), .y(y_0)),
+                inst_1 (.d0(d0 [3:2]), .d1(d1 [3:2]), .d2(d2 [3:2]), .d3(d3 [3:2]), .sel(sel), .y(y_2));
+
+     assign y = {y_2,y_0};
+
 
 
   // TODO
-
   // Implement mux_4_1 with 4-bit data
   // using two instances of mux_4_1_width_2 with 2-bit data
 
