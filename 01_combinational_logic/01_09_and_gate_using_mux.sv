@@ -17,6 +17,14 @@ module and_gate_using_mux
     input  b,
     output o
 );
+parameter in_1 = 0;
+parameter in_2 = 1;
+
+  mux inst1(.d0(in_1), .d1(b), .sel(a), .y(o));
+
+
+
+
 
   // TODO
 

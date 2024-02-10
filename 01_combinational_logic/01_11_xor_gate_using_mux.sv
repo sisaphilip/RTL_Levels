@@ -18,6 +18,11 @@ module xor_gate_using_mux
     output o
 );
 
+
+mux inst0 (.d0(b), .d1(~b), .sel(a), .y(o));
+
+
+
   // TODO
 
   // Implement xor gate using instance(s) of mux,
