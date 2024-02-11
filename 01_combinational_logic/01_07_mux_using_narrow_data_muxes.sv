@@ -20,15 +20,15 @@ module mux_4_1
 );
   
 
-wire [2:0] y_0;
-wire [2:0] y_2;
+wire [1:0] y_0;
+wire [1:0] y_1;
 
 // similar instances of mux_4_1_width_2
 
 mux_4_1_width_2 inst_0 (.d0(d0 [1:0]), .d1(d1 [1:0]), .d2(d2 [1:0]), .d3(d3 [1:0]), .sel(sel), .y(y_0)),
-                inst_1 (.d0(d0 [3:2]), .d1(d1 [3:2]), .d2(d2 [3:2]), .d3(d3 [3:2]), .sel(sel), .y(y_2));
+                inst_1 (.d0(d0 [3:2]), .d1(d1 [3:2]), .d2(d2 [3:2]), .d3(d3 [3:2]), .sel(sel), .y(y_1));
 
-     assign y = {y_2,y_0};
+     assign y = {y_1,y_0};
 
 
 
