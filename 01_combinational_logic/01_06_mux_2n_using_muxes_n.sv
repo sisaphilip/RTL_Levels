@@ -18,11 +18,11 @@ wire [3:0] y1;
 wire [3:0] y2;
 
 // instantiating similar module                                             
-mux_2_1 inst_0 (.d0 (d0), .d1(d1),.y(y0 [3:0]), .sel()),   
-        inst_1 (.d0 (d2), .d1(d3),.y(y1[3:0]), .sel()),                           
-        inst_2 (.d0 (y0 [3:0]), .d1(y1 [3:0]),.y(y2 [3:0]), .sel());                             
+mux_2_1 inst_0 (.d0 (d0), .d1(d1),.y(y0), .sel(sel[0])),   
+        inst_1 (.d0 (d2), .d1(d3),.y(y1), .sel(sel[0])),                           
+        inst_2 (.d0 (y0), .d1(y1),.y(y2), .sel(sel[1]));                             
 
-      assign y = y2 [3:0];
+      assign y = y2;
 
 
 //by sisa how to manage sel for 
