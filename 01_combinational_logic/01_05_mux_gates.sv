@@ -38,15 +38,18 @@ module mux_4_1
   input  [1:0] sel,
   output [3:0] y
 );
-  wire sel0 = {3'b000 , (~ sel [0] & ~ sel [1])};
-  wire sel1 = {3'b000 , (  sel [0] & ~ sel [1])};
-  wire sel2 = {3'b000 , (~ sel [0] &   sel [1])};
-  wire sel3 = {3'b000 , (  sel [0] &   sel [1])};
- 
-  assign y =  (d0 & sel0) | (d1 & sel1)| (d2 & sel2) | (d3 & sel3);
+  //wire sel0 = {3'b000 , (~ sel [0] & ~ sel [1])};
   
+  wire sel0 = ~ sel [0] & ~ sel [1];
+  wire sel1 =   sel [0] & ~ sel [1];
+  wire sel2 = ~ sel [0] &   sel [1];
+  wire sel3 =   sel [0] &   sel [1];
+ 
+  //assign y =  (d0 & sel0) | (d1 & sel1)| (d2 & sel2) | (d3 & sel3);
+  
+    assign y = (d0 & {4{sel0}}) | (d1 & {4{sel1}}) | (d2 & {4{sel2}}) | (d3 & {4{sel3}});
 
-  // TODO
+// TODO
   // Using code for mux_2_1_width_1, mux_2_1_width_2,
   // mux_4_1_width_1 as examples,
   // write code for 4:1 mux using only &, | and ~ operations,

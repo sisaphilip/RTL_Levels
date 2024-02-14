@@ -5,8 +5,7 @@ module mux_4_1_width_2
   output [1:0] y
 );
 
-  assign y = sel [1] ? (sel [0] ? d3 : d2)
-                     : (sel [0] ? d1 : d0);
+  assign y = sel [1] ? (sel [0] ? d3 : d2) : (sel [0] ? d1 : d0);
 
 endmodule
 
