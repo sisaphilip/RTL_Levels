@@ -1,36 +1,34 @@
-//----------------------------------------------------------------------------
-// Example
-//----------------------------------------------------------------------------
+//example
 module posedge_detector (input clk, rst, a, output detected);
   logic a_r;
-  // Note:
   // The a_r flip-flop input value d propogates to the output q
   // only on the next clock cycle.
-  always_ff @ (posedge clk)
-    if (rst)
-      a_r <= '0;
-    else
-      a_r <= a;
+  always_ff @(posedge clk)
+    
+    if (rst) a_r <= '0;
+    else      a_r <= a;
+
   assign detected = ~ a_r & a;
 endmodule
-
-
-//----------------------------------------------------------------------------
+b
 // Task
-//----------------------------------------------------------------------------
 module one_cycle_pulse_detector (input clk, rst, a, output detected);
    logic a_t;
    logic  w0;
    logic  w1;
-     always_ff @ (posedge clk)
-     begin 
-       if (rst)  a_t <= '0;
-  
-      w0 =  a_t | a;
-      w1 = ~a_t & a;
-   
-     end 
+     always_ff @(posedge clk)
+     
+      if (rst)  a_t <= '0;
+      else   
+          begin  //need for sequential stsmt for 010 
+     a_t <= a;
+      w0 <=  a_t | ~ a;    
+      w1 <= ~ a_t & a;
+      //w0 <=  a_t | ~ a;
+        
       assign detected = {w0,w1,w0};
+    end
+
 // Task:
 // Create an one cycle pulse (010) detector.
 // Note:
@@ -78,11 +76,11 @@ module testbench;
         a,
         pd_detected,   seq_posedge         [i],
         ocpd_detected, seq_one_cycle_pulse [i]);
-
+     
       if (   pd_detected   !== seq_posedge         [i]
           || ocpd_detected !== seq_one_cycle_pulse [i])
-  
-      begin
+        
+          begin
         $display ("%s FAIL - see log above", `__FILE__);
         $finish;
       end

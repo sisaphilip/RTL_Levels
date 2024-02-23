@@ -1,7 +1,6 @@
 //----------------------------------------------------------------------------
 // Example
 //----------------------------------------------------------------------------
-
 module serial_comparator_least_significant_first
 (
   input  clk,
@@ -12,7 +11,6 @@ module serial_comparator_least_significant_first
   output a_eq_b,
   output a_greater_b
 );
-
   logic prev_a_eq_b, prev_a_less_b;
 
   assign a_eq_b      = prev_a_eq_b & (a == b);
@@ -30,13 +28,10 @@ module serial_comparator_least_significant_first
       prev_a_eq_b   <= a_eq_b;
       prev_a_less_b <= a_less_b;
     end
-
 endmodule
-
 //----------------------------------------------------------------------------
 // Task
 //----------------------------------------------------------------------------
-
 module serial_comparator_most_significant_first
 (
   input  clk,
@@ -47,28 +42,43 @@ module serial_comparator_most_significant_first
   output a_eq_b,
   output a_greater_b
 );
+logic prev_a_eq_b, prev_a_less_b;
+//1 bit data has no distinged MSB nor LSB
 
-  // Task:
-  // Implement a module that compares two numbers in a serial manner.
+
+serial_comparator_least_significant_first serial_comparator_least_significant_first (.*);
+
+always_ff @ (posedge clk)
+    if (rst)
+    begin
+      prev_a_eq_b   <= '1;
+      prev_a_less_b <= '0;
+    end
+    else
+    begin
+      prev_a_eq_b   <= a_eq_b;
+      prev_a_less_b <= a_less_b;
+    end
+   if (a_less_b == 1b'1)
+     // a is less than b
+   if (a_eq_b == 1b'1)
+     //a is equal to b
+   if (a_greater_b == 1b'1)
+     // a is greater than b
+   //
+// Implement a module that compares two numbers in a serial manner.
   // The module inputs a and b are 1-bit digits of the numbers
   // and most significant bits are first.
   // The module outputs a_less_b, a_eq_b, and a_greater_b
   // should indicate whether a is less than, equal to, or greater than b, respectively.
   // The module should also use the clk and rst inputs.
-  //
   // See the testbench for the output format ($display task).
-
-
 endmodule
-
 //----------------------------------------------------------------------------
 // Testbench
 //----------------------------------------------------------------------------
-
 module testbench;
-
   logic clk;
-
   initial
   begin
     clk = '0;
@@ -87,7 +97,6 @@ module testbench;
     repeat (2) @ (posedge clk);
     rst <= '0;
   end
-
   logic a, b;
   logic scl_less, scl_eq, scl_greater;
   logic scm_less, scm_eq, scm_greater;

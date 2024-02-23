@@ -1,19 +1,19 @@
-//----------------------------------------------------------------------------
+
 // Example
-//----------------------------------------------------------------------------
-//module fibonacci
-//(
-//input               clk,
-//input               rst,
-//output logic [15:0] num
-//);
-//logic [15:0] num2;
-//always_ff @ (posedge clk)
-//if (rst)
-//{ num, num2 } <= { 16'd1, 16'd1 };
-//else
-//    { num, num2 } <= { num2, num + num2 };
-//endmodule
+ module fibonacci
+ (
+ input               clk,
+ input               rst,
+ output logic [15:0] num
+ );
+ logic [15:0] nu2;
+
+always_ff @ (posedge clk)
+   if (rst)
+  { num, num2 } <= { 16'd1, 16'd1 };
+   else
+    { num, num2 } <= { num2, num + num2 };
+ endmodule
 //----------------------------------------------------------------------------
 // Task
 //----------------------------------------------------------------------------
@@ -23,22 +23,15 @@ module fibonacci_2(
   output logic [15:0] num,
   output logic [15:0] num2
 );
-  num  = 16'd1;
-  num2 = 16'd1;
+
 always_ff @(posedge clk)
-    
-      if (posedge rst)        //{ num, num2 } <= { 16'd1, 16'd1 };
-        num  = 16'd1;
-        num2 = 16'd1;
+     if (rst)
+          { num, num2 } <= {16'd1,16'd1};
 
-else
-      num  <= num2;
-      num2 <= num + num2;
-
-
-
-      //{ num, num2 } <= { num2, num + num2 };
-
+      //num & num2 <= 16'd1 & 16'd1;
+      //num2 <= 16'd1;
+        else
+     { num, num2 } <= { num2, num + num2 };
 // Task:
 // Implement a module that generates two fibonacci numbers per cycle
 endmodule
@@ -47,11 +40,9 @@ endmodule
 //----------------------------------------------------------------------------
 module testbench;
   logic clk;
-
   initial
   begin
     clk = 0;
-
     forever
       # 500 clk = ~ clk;
   end
@@ -66,26 +57,18 @@ module testbench;
     repeat (2) @ (posedge clk);
     rst <= '0;
   end
-
   logic [15:0] f1_num, f2_num, f2_num2;
-
   fibonacci   f1 (.num (f1_num), .*);
   fibonacci_2 f2 (.num (f2_num), .num2 (f2_num2), .*);
-
   localparam n = 10;
-
   logic [15:0] fifo1 [$], fifo2 [$];
-
   initial
   begin
     @ (negedge rst);
-
     while (fifo1.size () < n || fifo2.size () < n)
     begin
       @ (posedge clk);
-
       $display ("%d (%d %d)", f1_num, f2_num, f2_num2);
-
       fifo1.push_back (f1_num);
       fifo2.push_back (f2_num);
       fifo2.push_back (f2_num2);

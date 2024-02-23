@@ -1,6 +1,4 @@
-//----------------------------------------------------------------------------
 // Example
-//----------------------------------------------------------------------------
 module serial_adder
 (
   input  clk,
@@ -10,20 +8,19 @@ module serial_adder
   output sum
 );
   // carry_d represents the cominational data input to the carry register.
-  //logic carry;
-  //wire carry_d;
-  //assign { carry_d, sum } = a + b + carry;
-  //always_ff @ (posedge clk)
+logic carry;
+wire carry_d;
+
+assign { carry_d, sum } = a + b + carry;
+  always_ff @ (posedge clk)
   
-    //if (rst)
-   //   carry <= '0;
-    //else
-      //carry <= carry_d;
+   if (rst)
+      carry <= '0;
+    else
+      carry <= carry_d;
   
 endmodule
-//----------------------------------------------------------------------------
 // Task
-//----------------------------------------------------------------------------
 module serial_adder_using_logic_operations_only
 (
   input  clk,
@@ -33,15 +30,21 @@ module serial_adder_using_logic_operations_only
   output sum
 );
 
- assign sum   = a ^ b;
-// assign carry = a & b;
+logic  insum;
+logic  cIN,cOUT;
 
- always@ (posedge clk)
+assign insum  = a ^ b;
+assign sum    = insum ^ cIN;
+assign cOUT   = (a & b) | (cIN & (a & b));
+
+ always_ff @ (posedge clk)
    if (rst)
-     a <= '0;
+     cIN <= '0;
+//   else
+//   carry <= a & b;
+
 // Task:
 // Implement a serial adder using only ^ (XOR), | (OR), & (AND), ~ (NOT) bitwise operations.
-// Notes:
 // See Harris & Harris book
 // or https://en.wikipedia.org/wiki/Adder_(electronics)#Full_adder webpage
 // for information about the 1-bit full adder implementation.
@@ -82,18 +85,15 @@ module testbench;
   // Expected sequence of correct output values
   localparam [0 : n - 1] seq_sa_sum   = 16'b0110_0111_0100_0101;
   localparam [0 : n - 1] seq_salo_sum = 16'b0110_0111_0100_0101;
-  
+   
   initial
   begin
     @ (negedge rst);
-
-    for (int i = 0; i < n; i ++)
+     for (int i = 0; i < n; i ++)
     begin
       a <= seq_a [i];
       b <= seq_b [i];
-
       @ (posedge clk);
-
       $display ("%b %b %b (%b) %b (%b)",
         a, b,
         sa_sum,   seq_sa_sum   [i],
@@ -106,9 +106,7 @@ module testbench;
         $finish;
       end
     end
-
     $display ("%s PASS", `__FILE__);
     $finish;
   end
-
 endmodule
