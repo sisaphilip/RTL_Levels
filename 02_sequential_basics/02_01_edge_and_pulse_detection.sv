@@ -5,30 +5,31 @@ module posedge_detector (input clk, rst, a, output detected);
   // only on the next clock cycle.
   always_ff @(posedge clk)
     
-    if (rst) a_r <= '0;
+    if (rst)  a_r <= '0;
     else      a_r <= a;
 
   assign detected = ~ a_r & a;
 endmodule
-b
 // Task
 module one_cycle_pulse_detector (input clk, rst, a, output detected);
    logic a_t;
    logic  w0;
    logic  w1;
-     always_ff @(posedge clk)
+   logic  w2;
+   always_ff @(posedge clk) begin
      
       if (rst)  a_t <= '0;
       else   
-          begin  //need for sequential stsmt for 010 
-     a_t <= a;
-      w0 <=  a_t | ~ a;    
-      w1 <= ~ a_t & a;
-      //w0 <=  a_t | ~ a;
-        
-      assign detected = {w0,w1,w0};
-    end
-
+          begin  //need for blocking stsmt for 010 
+     a_t = a;
+      w0 =  a_t | ~ a;    
+      w1 = ~ a_t & a;
+      w2 =  a_t | ~ a;
+    
+   // assign detected = {w0,w1,w2};
+    end    
+  end
+     assign detected = {w0,w1,w2}; 
 // Task:
 // Create an one cycle pulse (010) detector.
 // Note:

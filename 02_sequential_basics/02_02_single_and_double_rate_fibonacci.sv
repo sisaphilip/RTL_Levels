@@ -1,18 +1,25 @@
 
-// Example
  module fibonacci
  (
  input               clk,
  input               rst,
  output logic [15:0] num
  );
- logic [15:0] nu2;
+ logic [15:0] num2;
 
 always_ff @ (posedge clk)
    if (rst)
-  { num, num2 } <= { 16'd1, 16'd1 };
-   else
-    { num, num2 } <= { num2, num + num2 };
+   begin
+     num  <= 16'd1;
+     num2 <= 16'd1;
+     //    {num, num2} <= {16'd1,16'd1};
+    end
+      else
+       begin
+  //     { num, num2 } <= { num2, num + num2 };
+  assign num  = num2;
+  assign num2 = num + num2;
+       end
  endmodule
 //----------------------------------------------------------------------------
 // Task
@@ -25,14 +32,21 @@ module fibonacci_2(
 );
 
 always_ff @(posedge clk)
-     if (rst)
-          { num, num2 } <= {16'd1,16'd1};
+  if (rst) begin 
+    //{num, num2} <= {16'd1,16'd1};
+        num  <= 16'd1;
+        num2 <= 16'd1;
+      end 
+    else
+     begin            
+     
+//{num,num2} <= {num2, num + num2};
 
-      //num & num2 <= 16'd1 & 16'd1;
-      //num2 <= 16'd1;
-        else
-     { num, num2 } <= { num2, num + num2 };
-// Task:
+   assign num  = num2; 
+   assign num2 = num + num2;
+      //num  <= num2;
+    end
+    // Task:
 // Implement a module that generates two fibonacci numbers per cycle
 endmodule
 //----------------------------------------------------------------------------

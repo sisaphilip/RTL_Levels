@@ -32,22 +32,24 @@ endmodule
 //----------------------------------------------------------------------------
 // Task
 //----------------------------------------------------------------------------
-module serial_comparator_most_significant_first
+module serial_comparator_most_significant_first 
+
 (
   input  clk,
   input  rst,
-  input  a,
-  input  b,
-  output a_less_b,
-  output a_eq_b,
-  output a_greater_b
+  input  [0: 15]a,
+  input  [0: 15]b,
+  output [0: 15]a_less_b,
+  output [0: 15]a_eq_b,
+  output [0: 15]a_greater_b
 );
-logic prev_a_eq_b, prev_a_less_b;
-//1 bit data has no distinged MSB nor LSB
 
+logic [0: 15]prev_a_eq_b;
+logic [0: 15]prev_a_less_b;
 
-serial_comparator_least_significant_first serial_comparator_least_significant_first (.*);
-
+  assign a_eq_b      = prev_a_eq_b & (a == b);
+  assign a_less_b    = (~ a & b) | (a == b & prev_a_less_b);
+  assign a_greater_b = (~ a_eq_b) & (~ a_less_b);
 always_ff @ (posedge clk)
     if (rst)
     begin
@@ -59,14 +61,19 @@ always_ff @ (posedge clk)
       prev_a_eq_b   <= a_eq_b;
       prev_a_less_b <= a_less_b;
     end
-   if (a_less_b == 1b'1)
-     // a is less than b
-   if (a_eq_b == 1b'1)
-     //a is equal to b
-   if (a_greater_b == 1b'1)
-     // a is greater than b
-   //
-// Implement a module that compares two numbers in a serial manner.
+     
+    //if (a_less_b == 1b'1 ) begin
+       //  $display("Value a is less than value of b");
+     //end
+       //else if (a_eq_b == 1b'1) begin
+       //  $display("Value a is equal to value b");
+     //end 
+      //else
+    //    begin 
+      //  if (a_greater_b == 1b'1)
+//         $display("Value a is greater than value b");
+  //     end
+  // Impliment a module that compares two numbers in a serial manner.
   // The module inputs a and b are 1-bit digits of the numbers
   // and most significant bits are first.
   // The module outputs a_less_b, a_eq_b, and a_greater_b
