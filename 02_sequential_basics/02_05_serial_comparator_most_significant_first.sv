@@ -37,11 +37,11 @@ module serial_comparator_most_significant_first
 (
   input  clk,
   input  rst,
-  input  [0: 15]a,
-  input  [0: 15]b,
-  output [0: 15]a_less_b,
-  output [0: 15]a_eq_b,
-  output [0: 15]a_greater_b
+  input logic [0: 15]a,
+  input  logic [0: 15]b,
+  output logic[0: 15]a_less_b,
+  output logic [0: 15]a_eq_b,
+  output logic [0: 15]a_greater_b
 );
 
 logic [0: 15]prev_a_eq_b;

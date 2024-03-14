@@ -1,4 +1,3 @@
-// Example
 module serial_adder
 (
   input  clk,
@@ -7,7 +6,7 @@ module serial_adder
   input  b,
   output sum
 );
-  // carry_d represents the cominational data input to the carry register.
+  // carry_d represents the combinational data input to the carry register.
 logic carry;
 wire carry_d;
 
@@ -31,17 +30,20 @@ module serial_adder_using_logic_operations_only
 );
 
 logic  insum;
+logic  inproduct;
 logic  cIN,cOUT;
 
 assign insum  = a ^ b;
+assign inproduct = a & b;
 assign sum    = insum ^ cIN;
-assign cOUT   = (a & b) | (cIN & (a & b));
+assign cOUT   = inproduct | (cIN & insum);
 
- always_ff @ (posedge clk)
-   if (rst)
+always_ff @ (posedge clk)
+ if (rst)
      cIN <= '0;
-//   else
-//   carry <= a & b;
+ else
+
+     cIN <= cOUT;
 
 // Task:
 // Implement a serial adder using only ^ (XOR), | (OR), & (AND), ~ (NOT) bitwise operations.
