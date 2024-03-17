@@ -1,6 +1,3 @@
-//----------------------------------------------------------------------------
-// Example
-//----------------------------------------------------------------------------
 module serial_comparator_least_significant_first
 (
   input  clk,
@@ -11,8 +8,8 @@ module serial_comparator_least_significant_first
   output a_eq_b,
   output a_greater_b
 );
-  logic prev_a_eq_b, prev_a_less_b;
 
+  logic prev_a_eq_b, prev_a_less_b;
   assign a_eq_b      = prev_a_eq_b & (a == b);
   assign a_less_b    = (~ a & b) | (a == b & prev_a_less_b);
   assign a_greater_b = (~ a_eq_b) & (~ a_less_b);
@@ -37,18 +34,21 @@ module serial_comparator_most_significant_first
 (
   input  clk,
   input  rst,
-  input logic [0: 15]a,
-  input  logic [0: 15]b,
-  output logic[0: 15]a_less_b,
-  output logic [0: 15]a_eq_b,
-  output logic [0: 15]a_greater_b
+  input   a,
+  input   b,
+  output  a_less_b,
+  output  a_eq_b,
+  output  a_greater_b
 );
 
-logic [0: 15]prev_a_eq_b;
-logic [0: 15]prev_a_less_b;
+logic a_msb = {<<4{a}};     // ieee sv 2017 pg 276
+logic b_msb = {<<4{b}};
 
-  assign a_eq_b      = prev_a_eq_b & (a == b);
-  assign a_less_b    = (~ a & b) | (a == b & prev_a_less_b);
+logic prev_a_eq_b;
+logic prev_a_less_b;
+
+  assign a_eq_b      = prev_a_eq_b & (a_msb == b_msb);
+  assign a_less_b    = (~ a_msb & b_msb) | (a_msb == b_msb & prev_a_less_b);
   assign a_greater_b = (~ a_eq_b) & (~ a_less_b);
 always_ff @ (posedge clk)
     if (rst)

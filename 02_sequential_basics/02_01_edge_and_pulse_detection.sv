@@ -4,32 +4,38 @@ module posedge_detector (input clk, rst, a, output detected);
   // The a_r flip-flop input value d propogates to the output q
   // only on the next clock cycle.
   always_ff @(posedge clk)
-    
+
     if (rst)  a_r <= '0;
     else      a_r <= a;
-
   assign detected = ~ a_r & a;
 endmodule
+
 // Task
 module one_cycle_pulse_detector (input clk, rst, a, output detected);
-   logic a_t;
-   logic  w0;
-   logic  w1;
-   logic  w2;
+   logic a_t,a_t1,a_t2;
+   
+    //detected = a_t & a;
+//   assign detected = ~ a_t & a;
+   //assign  w2 = a_t & a;
+   
    always_ff @(posedge clk) begin
      
       if (rst)  a_t <= '0;
-      else   
-          begin  //need for blocking stsmt for 010 
-     a_t = a;
-      w0 =  a_t | ~ a;    
-      w1 = ~ a_t & a;
-      w2 =  a_t | ~ a;
-    
+
+      else 
+      begin
+         a_t <= a;
+        a_t1<= a_t;
+         a_t2<= a_t1;
+        // detected = a_t;
+        // detected =  a_t | ~ a;    
+       //  detected_0 = ~ a_t & a;
+      //w2 =  a_t | ~ a;
+      end
    // assign detected = {w0,w1,w2};
-    end    
+     
   end
-     assign detected = {w0,w1,w2}; 
+   assign detected = {a_t,a_t1,a_t2}; 
 // Task:
 // Create an one cycle pulse (010) detector.
 // Note:
