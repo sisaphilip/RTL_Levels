@@ -12,30 +12,23 @@ endmodule
 
 // Task
 module one_cycle_pulse_detector (input clk, rst, a, output detected);
-   logic a_t,a_t1,a_t2;
+   logic q1,q2; // w1, w2; //a_t1,a_t2;
    
     //detected = a_t & a;
-//   assign detected = ~ a_t & a;
-   //assign  w2 = a_t & a;
+    //assign detected = ~ a_t & a;
+    //assign  w2 = a_t & a;
    
-   always_ff @(posedge clk) begin
+   always_ff @(posedge clk)
      
-      if (rst)  a_t <= '0;
+      if (rst)  q1 <= '0;
 
       else 
       begin
-         a_t <= a;
-        a_t1<= a_t;
-         a_t2<= a_t1;
-        // detected = a_t;
-        // detected =  a_t | ~ a;    
-       //  detected_0 = ~ a_t & a;
-      //w2 =  a_t | ~ a;
+        q1 <= a;
+        q2 <= q1;
       end
-   // assign detected = {w0,w1,w2};
-     
-  end
-   assign detected = {a_t,a_t1,a_t2}; 
+   assign detected = ~a & q1 & ~q2;
+
 // Task:
 // Create an one cycle pulse (010) detector.
 // Note:

@@ -34,15 +34,15 @@ module serial_comparator_most_significant_first
 (
   input  clk,
   input  rst,
-  input   a,
-  input   b,
+  input  [15:0]a,
+  input  [15:0]b,
   output  a_less_b,
   output  a_eq_b,
   output  a_greater_b
 );
 
-logic a_msb = {<<4{a}};     // ieee sv 2017 pg 276
-logic b_msb = {<<4{b}};
+assign a_msb = {<<{a}};     // ieee sv 2017 pg 276
+assign b_msb = {<<{b}};
 
 logic prev_a_eq_b;
 logic prev_a_less_b;
