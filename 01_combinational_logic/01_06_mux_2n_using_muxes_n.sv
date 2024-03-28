@@ -25,11 +25,7 @@ mux_2_1 inst_0 (.d0 (d0), .d1(d1),.y(y0), .sel(sel[0])),
       assign y = y2;
 
 
-//by sisa how to manage sel for 
-
-
-
-  // Implement mux_4_1 using three instances of mux_2_1
+//Implement mux_4_1 using three instances of mux_2_1
 endmodule
 //----------------------------------------------------------------------------
 module testbench;

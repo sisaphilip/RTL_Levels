@@ -1,7 +1,4 @@
-//----------------------------------------------------------------------------
 // Example
-//----------------------------------------------------------------------------
-
 module detect_4_bit_sequence_using_fsm
 (
   input  clk,
@@ -9,9 +6,7 @@ module detect_4_bit_sequence_using_fsm
   input  a,
   output detected
 );
-
   // Detection of the "1010" sequence
-
   // States (F — First, S — Second)
   enum logic[2:0]
   {
@@ -40,7 +35,7 @@ module detect_4_bit_sequence_using_fsm
     endcase
   end
 
-  // Output logic (depends only on the current state)
+  // Output logic (depends only on the current state)// moore fsm
   assign detected = (state == S0);
 
   // State update
@@ -63,18 +58,62 @@ module detect_6_bit_sequence_using_fsm
   input  a,
   output detected
 );
+enum logic[2:0]
+  {
+     IDLE = 3'b000,
+     S0   = 3'b001,
+     S1   = 3'b010,
+     S2   = 3'b011,
+     S3   = 3'b100,
+     S4   = 3'b101,
+     S5   = 3'b110
+  }
+  state, new_state;
 
+  // State transition logic
+  always_comb
+  begin
+    new_state = state;
+
+    case (state)
+    
+    IDLE:   if (  a) new_state = S0;
+            else     new_state = IDLE;
+      
+      S0:   if (  a) new_state = S1;
+            else    new_state  = IDLE;
+
+      S1:   if (~ a) new_state = S2;
+            else     new_state = S1;
+            
+      S2:   if (~ a) new_state = S3;
+            else     new_state = S0;
+
+      S3:   if (  a) new_state = S4;
+            else     new_state = IDLE;
+
+      S4:   if (  a) new_state = S5;
+            else     new_state = IDLE;
+      S5:   if (  a) new_state = S1;
+            else if (~ a) new_state = S2;
+    endcase
+  end
+  // moore fsm
+  assign detected = (state == S5);
+
+   //State register
+  always_ff @ (posedge clk)
+    if (rst)
+      state <= IDLE;
+    else
+      state <= new_state;
   // Task:
   // Implement a module that detects the "110011" input sequence
-  //
   // Hint: See Lecture 3 for details
-
 
 endmodule
 
-//----------------------------------------------------------------------------
 // Testbench
-//----------------------------------------------------------------------------
 
 module testbench;
 

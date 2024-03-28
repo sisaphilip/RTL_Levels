@@ -20,8 +20,10 @@ module one_cycle_pulse_detector (input clk, rst, a, output detected);
    
    always_ff @(posedge clk)
      
-      if (rst)  q1 <= '0;
-
+     if (rst) begin
+       q1 <= '0;
+       q2 <= '0;
+    end
       else 
       begin
         q1 <= a;

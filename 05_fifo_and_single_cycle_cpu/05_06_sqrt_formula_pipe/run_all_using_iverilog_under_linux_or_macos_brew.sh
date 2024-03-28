@@ -15,17 +15,18 @@ fi
 
 rm -rf log.txt
 
-for f in *.sv
-do
-       iverilog -g2005-sv $f >> log.txt 2>&1  \
-    && vvp a.out             >> log.txt 2>&1
+iverilog -g2005-sv                   \
+    -I testbenches testbenches/*.sv  \
+    black_boxes/*.sv                 \
+    *.sv                             \
+             >> log.txt 2>&1         \
+&& vvp a.out >> log.txt 2>&1
 
-    # gtkwave dump.vcd
-done
+if [ -f dump.vcd ] ; then
+    gtkwave dump.vcd --script gtkwave.tcl
+fi
 
 rm -f a.out
+# rm -f dump.vcd
 
-grep -e PASS -e FAIL -e error log.txt
-
-cd 03_04_sqrt_formula_fsms
-./run_all_using_iverilog_under_linux_or_macos_brew.sh
+grep -e PASS -e FAIL -e ERROR -e Error -e error -e Timeout log.txt
