@@ -19,14 +19,12 @@ module signed_add_with_overflow
   output  [3:0] sum,
   output       overflow
 );
-  assign sum = a + b;
-  assign overflow = (~a[3] & ~b[3] & sum[3]) | (a[3] & b[3] & ~sum[3]);
 
-//always_comb
-//begin
-  //if ()
-   //overflow = '1;
- //else 
+
+assign sum = a + b;
+assign overflow = (~a[3] & ~b[3] & sum[3]) | (a[3] & b[3] & ~sum[3]);
+
+
 
 
   // Task:
