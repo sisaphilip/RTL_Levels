@@ -8,13 +8,13 @@ module detect_4_bit_sequence_using_fsm
 );
   // Detection of the "1010" sequence
   // States (F — First, S — Second)
-  enum logic[2:0]
+  enum //logic[2:0]
   {
-     IDLE = 3'b000,
-     F1   = 3'b001,
-     F0   = 3'b010,
-     S1   = 3'b011,
-     S0   = 3'b100
+     IDLE, //= 3'b000,
+     F1  , //= 3'b001,
+     F0   ,//= 3'b010,
+     S1   ,//= 3'b011,
+     S0   //= 3'b100
   }
   state, new_state;
 
@@ -101,7 +101,7 @@ enum logic[2:0]
   // moore fsm
   assign detected = (state == S5);
 
-   //State register
+  //State register
   always_ff @ (posedge clk)
     if (rst)
       state <= IDLE;
