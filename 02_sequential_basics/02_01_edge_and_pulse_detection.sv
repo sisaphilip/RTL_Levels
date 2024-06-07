@@ -11,13 +11,11 @@ module posedge_detector (input clk, rst, a, output detected);
 endmodule
 
 // Task
-module one_cycle_pulse_detector (input clk, rst, a, output detected);
-   logic q1,q2; // w1, w2; //a_t1,a_t2;
-   
-    //detected = a_t & a;
-    //assign detected = ~ a_t & a;
-    //assign  w2 = a_t & a;
-   
+module one_cycle_pulse_detector (
+  input clk, rst, a, output detected);
+  
+logic q1,q2; 
+
    always_ff @(posedge clk)
      
      if (rst) begin
