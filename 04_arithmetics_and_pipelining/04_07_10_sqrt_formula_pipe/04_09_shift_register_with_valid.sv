@@ -9,8 +9,10 @@ module one_bit_wide_shift_register_with_reset
     input  in_data,
     output out_data
 );
-    logic [depth - 1:0] data;
-    always_ff @ (posedge clk)
+
+logic [depth - 1:0] data;
+
+ always_ff @ (posedge clk)
         if (rst)
             data <= '0;
         else
