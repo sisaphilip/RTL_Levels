@@ -6,7 +6,8 @@ module serial_adder
   input  b,
   output sum
 );
-  // carry_d represents the combinational data input to the carry register.
+
+// carry_d represents the combinational data input to the carry register.
 logic carry;
 wire carry_d;
 
