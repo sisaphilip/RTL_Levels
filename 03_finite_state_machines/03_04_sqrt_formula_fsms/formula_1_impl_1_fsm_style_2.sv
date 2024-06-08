@@ -2,6 +2,8 @@
 // Example
 //----------------------------------------------------------------------------
 
+
+
 // You can read the discussion of this example
 // in the article by Yuri Panchul published in
 // FPGA-Systems Magazine :: FSM :: Issue ALFA (state_0)
