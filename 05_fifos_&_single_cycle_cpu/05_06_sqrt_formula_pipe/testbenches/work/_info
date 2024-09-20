@@ -1,0 +1,36 @@
+m255
+K4
+z2
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ishfisav/Desktop/rtl_design/micro-architecture/05_06_sqrt_formula_pipe/testbenches
+vtb
+2/tmp/nvim.ishfisav/n1ZklT/2/tb.sv
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1726335012
+!i10b 1
+!s100 gOB8N52k8egkZ3>cn;3Rz0
+I4?2>YMk?zF2Y4;z0^H[f=3
+S1
+R0
+w1726335012
+8/tmp/nvim.ishfisav/n1ZklT/2/tb.sv
+F/tmp/nvim.ishfisav/n1ZklT/2/tb.sv
+!i122 2
+L0 6 46
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1726335012.000000
+!s107 /tmp/nvim.ishfisav/n1ZklT/2/tb.sv|
+!s90 -quiet|-lint|/tmp/nvim.ishfisav/n1ZklT/2/tb.sv|
+!i113 0
+o-quiet -lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0

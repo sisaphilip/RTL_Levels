@@ -1,0 +1,86 @@
+m255
+K4
+z2
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/ishfisav/modelSim/modelsim_ase/bin
+vflip_flop_fifo_with_counter
+2/tmp/nvim.ishfisav/gS98xG/2/flip_flop_fifo_with_counter.sv
+Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1726312056
+!i10b 1
+!s100 X2NmE<;ZT0[Oo`AQ>oicI1
+IVcijcVK5g8RX=;Co;o;Sd2
+S1
+Z1 d/home/ishfisav/Desktop/rtl_design/micro-architecture/05_06_sqrt_formula_pipe
+w1726312056
+8/tmp/nvim.ishfisav/gS98xG/2/flip_flop_fifo_with_counter.sv
+F/tmp/nvim.ishfisav/gS98xG/2/flip_flop_fifo_with_counter.sv
+!i122 29
+L0 1 67
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1726312056.000000
+!s107 /tmp/nvim.ishfisav/gS98xG/2/flip_flop_fifo_with_counter.sv|
+!s90 -quiet|-lint|/tmp/nvim.ishfisav/gS98xG/2/flip_flop_fifo_with_counter.sv|
+!i113 0
+Z4 o-quiet -lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+vformula_2_pipe
+2/tmp/nvim.ishfisav/O5v8Ud/2/04_10_formula_2_pipe.sv
+R0
+!s110 1725900573
+!i10b 1
+!s100 ZY7iZS194:UVRElb1>Q1j0
+IkhR<78^5Be7TVN<BQ[N_i0
+S1
+R1
+w1725900572
+8/tmp/nvim.ishfisav/O5v8Ud/2/04_10_formula_2_pipe.sv
+F/tmp/nvim.ishfisav/O5v8Ud/2/04_10_formula_2_pipe.sv
+!i122 0
+L0 5 18
+R2
+R3
+r1
+!s85 0
+31
+!s108 1725900572.000000
+!s107 /tmp/nvim.ishfisav/O5v8Ud/2/04_10_formula_2_pipe.sv|
+!s90 -quiet|-lint|/tmp/nvim.ishfisav/O5v8Ud/2/04_10_formula_2_pipe.sv|
+!i113 0
+R4
+R5
+vformula_2_pipe_using_fifos
+2/tmp/nvim.ishfisav/SIVFNu/4/05_06_formula_2_pipe_using_fifos.sv
+R0
+!s110 1726335887
+!i10b 1
+!s100 <c@S06mE=Az8kQ8]:^]i43
+IQEzKYCVQjM6nAcDXY9X__0
+S1
+R1
+w1726335887
+8/tmp/nvim.ishfisav/SIVFNu/4/05_06_formula_2_pipe_using_fifos.sv
+F/tmp/nvim.ishfisav/SIVFNu/4/05_06_formula_2_pipe_using_fifos.sv
+!i122 81
+L0 2 114
+R2
+R3
+r1
+!s85 0
+31
+!s108 1726335887.000000
+!s107 /tmp/nvim.ishfisav/SIVFNu/4/05_06_formula_2_pipe_using_fifos.sv|
+!s90 -quiet|-lint|/tmp/nvim.ishfisav/SIVFNu/4/05_06_formula_2_pipe_using_fifos.sv|
+!i113 0
+R4
+R5

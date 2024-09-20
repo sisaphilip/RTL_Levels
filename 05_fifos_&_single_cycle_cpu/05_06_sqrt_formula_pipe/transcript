@@ -1,0 +1,26 @@
+# Loading project uarc_05_06
+cd /home/ishfisav/Desktop/chip_design/temp/05_06_sqrt_formula_pipe
+# reading /home/ishfisav/modelSim/modelsim_ase/linuxaloem/../modelsim.ini
+# 
+# 
+# 
+# 
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vsim work.one_bit_wide_shift_register_with_reset
+# vsim work.one_bit_wide_shift_register_with_reset 
+# Start time: 17:15:16 on Sep 03,2024
+# Loading sv_std.std
+# Loading work.one_bit_wide_shift_register_with_reset
+# Error opening /tmp/nvim.ishfisav/mVQN5n/2/04_09_shift_register_with_valid.sv
+# Path name '/tmp/nvim.ishfisav/mVQN5n/2/04_09_shift_register_with_valid.sv' doesn't exist.
+# Error opening /tmp/nvim.ishfisav/mVQN5n/2/04_09_shift_register_with_valid.sv
+# Path name '/tmp/nvim.ishfisav/mVQN5n/2/04_09_shift_register_with_valid.sv' doesn't exist.
+# Error opening /home/ishfisav/Desktop/chip_design/temp/05_06_sqrt_formula_pipe/verilog_src/std/std.sv
+# Path name '/home/ishfisav/Desktop/chip_design/temp/05_06_sqrt_formula_pipe/verilog_src/std/std.sv' doesn't exist.
+# Error opening /tmp/nvim.ishfisav/mVQN5n/2/04_09_shift_register_with_valid.sv
+# Path name '/tmp/nvim.ishfisav/mVQN5n/2/04_09_shift_register_with_valid.sv' doesn't exist.
+# Error opening /tmp/nvim.ishfisav/mVQN5n/2/04_09_shift_register_with_valid.sv
+# Path name '/tmp/nvim.ishfisav/mVQN5n/2/04_09_shift_register_with_valid.sv' doesn't exist.
+# End time: 18:30:45 on Sep 03,2024, Elapsed time: 1:15:29
+# Errors: 0, Warnings: 0
