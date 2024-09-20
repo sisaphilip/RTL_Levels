@@ -1,6 +1,6 @@
 module isqrt_slice_reg
 # (
-    parameter [31:0] m = 32'h4000_0000
+    parameter    [31:0] m = 32'h4000_0000
 )
 (
     input               clk,

@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ishfisav/Desktop/rtl_design/systemverilog-homework/04_arithmetics_and_pipelining/04_07_10_sqrt_formula_pipe
+vformula_1_pipe
+2/tmp/nvim.ishfisav/rPAF6y/4/04_07_formula_1_pipe.sv
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1726679372
+!i10b 1
+!s100 RIk5V]Pzl?PXL2OR^UH^K3
+Ik6FJjU:f6=KaMJ2mXfDM[0
+S1
+R0
+w1726679372
+8/tmp/nvim.ishfisav/rPAF6y/4/04_07_formula_1_pipe.sv
+F/tmp/nvim.ishfisav/rPAF6y/4/04_07_formula_1_pipe.sv
+!i122 22
+L0 2 178
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1726679372.000000
+!s107 /tmp/nvim.ishfisav/rPAF6y/4/04_07_formula_1_pipe.sv|
+!s90 -quiet|-lint|/tmp/nvim.ishfisav/rPAF6y/4/04_07_formula_1_pipe.sv|
+!i113 0
+Z4 o-quiet -lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+vformula_1_pipe_aware_fsm
+2/tmp/nvim.ishfisav/4SI1xe/4/04_08_formula_1_pipe_aware_fsm.sv
+R1
+!s110 1726679114
+!i10b 1
+!s100 @aU?0129eW3_i8QQ]U6ZV1
+IZ;c`G>kN4<WWcnK?XfC101
+S1
+R0
+w1726679114
+8/tmp/nvim.ishfisav/4SI1xe/4/04_08_formula_1_pipe_aware_fsm.sv
+F/tmp/nvim.ishfisav/4SI1xe/4/04_08_formula_1_pipe_aware_fsm.sv
+!i122 21
+L0 2 103
+R2
+R3
+r1
+!s85 0
+31
+!s108 1726679114.000000
+!s107 /tmp/nvim.ishfisav/4SI1xe/4/04_08_formula_1_pipe_aware_fsm.sv|
+!s90 -quiet|-lint|/tmp/nvim.ishfisav/4SI1xe/4/04_08_formula_1_pipe_aware_fsm.sv|
+!i113 0
+R4
+R5
+vformula_2_pipe
+2/tmp/nvim.ishfisav/QPwpP9/2/04_10_formula_2_pipe.sv
+R1
+!s110 1726663877
+!i10b 1
+!s100 Zz:VmYa@GBHB9bDb55GZh1
+IW2Z7n56f29L@i>zhUjRjF0
+S1
+R0
+w1726663877
+8/tmp/nvim.ishfisav/QPwpP9/2/04_10_formula_2_pipe.sv
+F/tmp/nvim.ishfisav/QPwpP9/2/04_10_formula_2_pipe.sv
+!i122 12
+L0 5 41
+R2
+R3
+r1
+!s85 0
+31
+!s108 1726663877.000000
+!s107 /tmp/nvim.ishfisav/QPwpP9/2/04_10_formula_2_pipe.sv|
+!s90 -quiet|-lint|/tmp/nvim.ishfisav/QPwpP9/2/04_10_formula_2_pipe.sv|
+!i113 0
+R4
+R5
+vone_bit_wide_shift_register_with_reset
+R1
+Z6 !s110 1726663866
+!i10b 1
+!s100 5XQfABQUN`5dSjLHO5Eba1
+I942jc<P@TTWNmg3KRVg1k2
+S1
+R0
+Z7 w1726663866
+Z8 8/tmp/nvim.ishfisav/2GU8A3/4/04_09_shift_register_with_valid.sv
+Z9 F/tmp/nvim.ishfisav/2GU8A3/4/04_09_shift_register_with_valid.sv
+!i122 11
+L0 2 22
+R2
+R3
+r1
+!s85 0
+31
+Z10 !s108 1726663866.000000
+Z11 !s107 /tmp/nvim.ishfisav/2GU8A3/4/04_09_shift_register_with_valid.sv|
+Z12 !s90 -quiet|-lint|/tmp/nvim.ishfisav/2GU8A3/4/04_09_shift_register_with_valid.sv|
+!i113 0
+R4
+R5
+vshift_register
+R1
+R6
+!i10b 1
+!s100 Qba:0WUWLVSQZfA5ma@Kl2
+I9]QY:Fk@NmEXLaO96>^m^1
+S1
+R0
+R7
+R8
+R9
+!i122 11
+L0 26 23
+R2
+R3
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R4
+R5

@@ -33,7 +33,7 @@ module formula_1_impl_1_fsm_style_2
 
     // FSM
 
-    enum logic [2:0]
+    enum logic   [2:0 ]
     {
         st_idle       = 3'd0,
         st_wait_a_res = 3'd1,
@@ -94,8 +94,8 @@ module formula_1_impl_1_fsm_style_2
 
    always_ff @ (posedge clk)
         if (state == st_idle)
-            res <= '0;
+            res   <= '0;
         else if (isqrt_y_vld)
-            res <= res + isqrt_y;
+            res   <= res + isqrt_y;
 
 endmodule

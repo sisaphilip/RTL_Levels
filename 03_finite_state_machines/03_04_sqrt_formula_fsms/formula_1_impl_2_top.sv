@@ -16,17 +16,17 @@ module formula_1_impl_2_top
     output [31:0] res
 );
 
-    wire        isqrt_1_x_vld;
-    wire [31:0] isqrt_1_x;
+    wire          isqrt_1_x_vld;
+    wire   [31:0] isqrt_1_x;
 
-    wire        isqrt_1_y_vld;
-    wire [15:0] isqrt_1_y;
+    wire          isqrt_1_y_vld;
+    wire   [15:0] isqrt_1_y;
 
-    wire        isqrt_2_x_vld;
-    wire [31:0] isqrt_2_x;
+    wire          isqrt_2_x_vld;
+    wire   [31:0] isqrt_2_x;
 
-    wire        isqrt_2_y_vld;
-    wire [15:0] isqrt_2_y;
+    wire          isqrt_2_y_vld;
+    wire   [15:0] isqrt_2_y;
 
     formula_1_impl_2_fsm i_formula_1_impl_2_fsm (.*);
 

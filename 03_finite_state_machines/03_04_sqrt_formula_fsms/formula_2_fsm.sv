@@ -1,84 +1,100 @@
 // Task
 module formula_2_fsm
 (
-    input               clk,
-    input               rst,
+    input                 clk,
+    input                 rst,
 
-    input               arg_vld,
-    input        [31:0] a,
-    input        [31:0] b,
-    input        [31:0] c,
-
-    output logic        res_vld,
-    output logic [31:0] res,
+    input                 arg_vld,
+    input          [31:0] a,
+    input          [31:0] b,
+    input          [31:0] c,
+ 
+    output logic          res_vld,
+    output logic   [31:0] res,
 
     // isqrt interface
 
-    output logic        isqrt_x_vld,
-    output logic [31:0] isqrt_x,
+    output logic         isqrt_x_vld,
+    output logic  [31:0] isqrt_x,
 
-    input               isqrt_y_vld,
-    input        [15:0] isqrt_y
+    input                isqrt_y_vld,
+    input         [15:0] isqrt_y
+);
+
+  
+
+isqrt #(4) _inst_isqrt(
+    .clk(clk),
+    .rst(rst),
+    .x_vld(isqrt_x_vld),
+    .x(isqrt_x),
+    .y_vld(isqrt_y_vld),
+    .y(isqrt_y)
+
+
 );
 
 
 
-isqrt inst1(.x(isqrt_y));
-
-    enum logic [2:0]
+    enum logic     [2:0 ]
     {
-        st_idle       = 3'd0,
-        st_wait_a_res = 3'd1,
-        st_wait_b_res = 3'd2,
-        st_wait_c_res = 3'd3
+     st_idle       = 3'd0,
+     st_c_res      = 3'd1,
+     st_cb_res     = 3'd2,
+     st_cba_res    = 3'd3
     }
     state, next_state;
 
     //------------------------------------------------------------------------
     // Next state and isqrt interface
+    logic  [15:0] value_for_c;
+    logic  [31:0] value_for_cb;
+    logic  [31:0] value_for_cba;
 
     always_comb
     begin
         next_state  = state;
-
         isqrt_x_vld = '0;
         isqrt_x     = 'x;  // Don't care
 
         case (state)
         st_idle:
         begin
-            isqrt_x = a;
-
+            isqrt_x = c;
+            
             if (arg_vld)
             begin
                 isqrt_x_vld = '1;
-                next_state  = st_wait_a_res;
+                value_for_c = isqrt_y;
+                next_state  = st_c_res;
             end
         end
 
-        st_wait_a_res:
+        st_c_res:
         begin
-            isqrt_x = b;
+            isqrt_x = b + value_for_c;
 
             if (isqrt_y_vld)
             begin
-                isqrt_x_vld = '1;
-                next_state  = st_wait_b_res;
+                isqrt_x_vld  = '1;
+                value_for_cb = isqrt_y;
+                next_state   = st_cb_res;
             end
         end
 
-        st_wait_b_res:
+        st_cb_res:
         begin
-            isqrt_x = c;
+            isqrt_x = a + value_for_cb;
 
             if (isqrt_y_vld)
             begin
-                isqrt_x_vld = '1;
-                next_state  = st_wait_c_res;
+                isqrt_x_vld   = '1;
+                value_for_cba = isqrt_y; 
+                next_state    = st_cba_res;
             end
         end
 
-        st_wait_c_res:
+        st_cba_res:
         begin
             if (isqrt_y_vld)
             begin
@@ -100,14 +116,13 @@ isqrt inst1(.x(isqrt_y));
         if (rst)
             res_vld <= '0;
         else
-            res_vld <= (state == st_wait_c_res & isqrt_y_vld);
+            res_vld <= (state == st_cba_res & isqrt_y_vld);
 
     always_ff @ (posedge clk)
         if (state == st_idle)
             res <= '0;
         else if (isqrt_y_vld)
             res <= res + isqrt_y;
-
 
     // Task:
     // Implement a module that calculates the folmula from the `formula_2_fn.svh` file

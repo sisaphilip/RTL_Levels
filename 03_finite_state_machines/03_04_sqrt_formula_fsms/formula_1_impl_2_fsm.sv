@@ -31,6 +31,7 @@ module formula_1_impl_2_fsm
 
 // module section
 
+
 isqrt inst1(.x(isqrt_1_y));
 isqrt inst2(.x(isqrt_2_y));
 
@@ -117,7 +118,6 @@ enum logic [2:0]
             res <= '0;
         else if (isqrt_1_y_vld && isqrt_2_y_vld)
             res <= res + (isqrt_1_y && isqrt_2_y);
-
 
     // Task:
     // Implement a module that calculates the folmula from the `formula_1_fn.svh` file

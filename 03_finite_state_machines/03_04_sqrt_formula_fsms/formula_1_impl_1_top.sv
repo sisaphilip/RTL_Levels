@@ -15,11 +15,11 @@ module formula_1_impl_1_top
     output [31:0] res
 );
 
-    wire        isqrt_x_vld;
-    wire [31:0] isqrt_x;
+    wire          isqrt_x_vld;
+    wire   [31:0] isqrt_x;
 
-    wire        isqrt_y_vld;
-    wire [15:0] isqrt_y;
+    wire          isqrt_y_vld;
+    wire   [15:0] isqrt_y;
 
     formula_1_impl_1_fsm  i_formula_1_impl_1_fsm (.*);
 
