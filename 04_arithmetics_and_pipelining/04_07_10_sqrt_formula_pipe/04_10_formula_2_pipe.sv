@@ -1,7 +1,6 @@
 //----------------------------------------------------------------------------
 // Task
 //----------------------------------------------------------------------------
-
 module formula_2_pipe
 (
     input         clk,
@@ -15,11 +14,99 @@ module formula_2_pipe
     output        res_vld,
     output [31:0] res
 );
-    // Task:
-    //
+ 
+//----------------STAGE_1-----------------------------------------------------------    
+
+
+logic [31:0] cy;
+logic        cy_vld;
+
+
+isqrt #(.n_pipe_stages(4)) inst_isqrt_c
+   (
+    .clk(clk),
+    .rst(rst),
+    .x_vld(arg_vld),
+    .x(c),
+    .y_vld(cy_vld),
+    .y(cy)
+   );
+
+   logic [31:0] shifted_b;
+
+shift_register #(.width(32), .depth(4)) inst_shift_register_b
+(
+    .clk(clk),
+    .in_data(b),
+    .out_data(shifted_b)
+);
+
+logic [31:0] sum_b_isqrt_c;
+logic [31:0] sum_b_isqrt_c_delayed;
+
+    assign sum_b_isqrt_c = shifted_b + cy;
+    
+    always_ff @ (posedge clk)
+        if(rst)
+            sum_b_isqrt_c_delayed <= '0;
+        else 
+            sum_b_isqrt_c_delayed <= sum_b_isqrt_c;
+
+
+   //------------------STAGE 2-------------------------------
+logic  [31:0] isqrt_sum_b_isqrt_cy;
+logic         isqrt_sum_b_isqrt_cy_vld;
+
+isqrt #(.n_pipe_stages(4)) inst_isqrt_sum_b_isqrt_c
+(
+    .clk(clk),
+    .rst(rst),
+    .x_vld(arg_vld),
+    .x(sum_b_isqrt_c_delayed),
+    .y_vld(isqrt_sum_b_isqrt_cy_vld),
+    .y(isqrt_sum_b_isqrt_cy)
+);
+
+logic [31:0] shifted_a;
+logic [31:0] sum_a_and_isqrt_b_plus_isqrt_c;
+
+shift_register #(.width(32), .depth(2*4 + 1 )) inst_shift_register_a
+(
+    .clk(clk),
+    .in_data(a),
+    .out_data(shifted_a)
+);
+
+  assign sum_a_and_isqrt_b_plus_isqrt_c = shifted_a + isqrt_sum_b_isqrt_cy;
+
+logic [31:0] delayed_stage_ii;
+
+  always_ff @ (posedge clk)
+      if(rst)
+      delayed_stage_ii <= '0;
+      else 
+      delayed_stage_ii <= sum_a_and_isqrt_b_plus_isqrt_c;
+      
+
+
+isqrt #(.n_pipe_stages(4)) inst_isqrt_sum_a_isqrt_b_plus_isqrt_c
+(
+    .clk(clk),
+    .rst(rst),
+    .x_vld(arg_vld),
+    .x(delayed_stage_ii),
+    .y_vld(res_vld),
+    .y(res)
+);
+
+
+
+
+
+
     // Implement a pipelined module formula_2_pipe that computes the result
     // of the formula defined in the file formula_2_fn.svh.
-    //
+    //  
     // The requirements:
     //
     // 1. The module formula_2_pipe has to be pipelined.
