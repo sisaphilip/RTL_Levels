@@ -15,21 +15,11 @@ module formula_2_pipe_using_fifos
 
 //-------------STAGE_1---------------------------------------------------------
 
-logic [31:0] a_fifo_out,b_fifo_out;
+logic [31:0] b_fifo_out;
 
-// fifo for the a input
-flip_flop_fifo_with_counter #(.width(32),.depth(8))  a_fifo(
-  .clk(clk), 
-  .rst(rst),
-  .push(),
-  .pop(),   
-  .write_data(a),
-  .read_data(a_fifo_out),
-  .empty(),
-  .full());
 
 //fifo for b input
-flip_flop_fifo_with_counter #(.width(32),.depth(8)) b_fifo(
+flip_flop_fifo_with_counter #(.width(32),.depth(16)) b_fifo(
   .clk(clk), 
   .rst(rst),
   .push(),
@@ -42,10 +32,10 @@ flip_flop_fifo_with_counter #(.width(32),.depth(8)) b_fifo(
 //---------Stage 1 sqrt fn for c-------------------------------------------
 
 logic cy_vld;
-logic [15:0] cy;
-logic [31:0] stage_1_sum, stage_1_sum_q;
+logic [31:0] cy;
+logic [31:0] stage_i_sum, stage_i_sum_q;
 
-isqrt #(512) _isqrt1
+isqrt #(16) i_isqrt_i
 (                 
     .clk(clk),
     .rst(rst),
@@ -55,59 +45,70 @@ isqrt #(512) _isqrt1
     .y(cy)
 );
  
- assign stage_1_sum = cy + b_fifo_out;    
- logic  [31:0] a_fifo_outdelayed;
+ assign stage_i_sum = cy + b_fifo_out;    
 
  //----------------------stage 1 register--------------------------------------
   
  always_ff @(posedge clk)
-   if (rst) begin
-         stage_1_sum_q     <= '0;
-         a_fifo_outdelayed <= '0;
-      end
-       else begin
-         stage_1_sum_q     <= stage_1_sum;
-         a_fifo_outdelayed <= a_fifo_out;
-         
-      end
+   if (rst) 
+         stage_i_sum_q     <= '0;
+      
+       else 
+         stage_i_sum_q     <= stage_i_sum;
+                  
+      
 
 //---------STAGE 2-----------------------------------------------------------
 
-logic [15:0] by;
-logic by_vld;
-logic [31:0] stage_2_sum, stage_2_sum_q;
+logic [31:0] iiy;
+logic iiy_vld;
+logic [31:0] stage_ii_sum, stage_ii_sum_q;
 
 //---------stage 2 isqrt ---------------------------------------------------
-isqrt #(512) _isqrt2
+isqrt #(16) i_isqrt_ii
 (
   .clk(clk), 
   .rst(rst),
   .x_vld(arg_vld),
-  .x(stage_1_sum_q),
-  .y_vld(by_vld),
-  .y(by)
+  .x(stage_i_sum_q),
+  .y_vld(iiy_vld),
+  .y(iiy)
 );
 
-assign stage_2_sum = by + a_fifo_outdelayed;
+logic [31:0] a_fifo_out;
+
+//fifo for a input
+flip_flop_fifo_with_counter #(.width(32),.depth(33)) a_fifo(
+  .clk(clk), 
+  .rst(rst),
+  .push(),
+  .pop(),
+  .write_data(a),
+  .read_data(a_fifo_out),
+  .empty(),
+  .full());
+
+//---------Stage 1 sqrt fn for c-------------------------------------------
+assign stage_ii_sum = iiy + a_fifo_out;
  
 //---------stage 2 register-------------------------------------------------
 
  always_ff @(posedge clk)
      if (rst)
-         stage_2_sum_q <= '0;
+         stage_ii_sum_q <= '0;
        else 
-         stage_2_sum_q <= stage_2_sum;
+         stage_ii_sum_q <= stage_ii_sum;
         
        
 
 //--------STAGE 3 ----------------------------------------------------------
 
-isqrt #(512) _isqrt3
+isqrt #(16) i_isqrt_iii
 (
   .clk(clk),
   .rst(rst),
   .x_vld(arg_vld),
-  .x(stage_2_sum_q),
+  .x(stage_ii_sum_q),
   .y_vld(res_vld),
   .y(res)
 );
