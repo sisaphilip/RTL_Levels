@@ -103,15 +103,6 @@ module formula_1_pipe_aware_fsm
 
 endmodule
 
-
-
-
-
-
-
-
-
-
     // Task:
     //
     // Implement a module formula_1_pipe_aware_fsm

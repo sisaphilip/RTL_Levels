@@ -45,8 +45,6 @@ module shift_register
 endmodule
 
 
-
-
 // Task
 module shift_register_with_valid
 # (
@@ -59,30 +57,31 @@ module shift_register_with_valid
     input                      in_vld,
     input        [width - 1:0] in_data,
 
-    output logic               out_vld,
+    output                     out_vld,
     output logic [width - 1:0] out_data
+    
 );
 
 logic [width - 1:0] data [0:depth - 1];
 
     always_ff @ (posedge clk) 
-    begin 
-        if (rst)
-        out_data <= '0;
-        
-        else if (in_vld) begin
-        data [0]   <= in_data;
+    begin
+        if(in_vld) begin
+        data [0]  <= in_data;
         for (int i = 1; i < depth; i ++)
-        data [i]   <= data [i - 1];
+        data [i]  <= data [i - 1];
+        
         end
 
-        else if (out_vld) begin
-        out_data  <= data [depth - 1];
-        end
-  
-     end
-
- end
+    end
+    
+    //last register cell
+    always_ff @ (posedge clk )
+       if(rst)
+        out_data  <= '0;
+       else if(out_vld)
+        out_data  <= data[depth-1];
+     
     // Task:
     // Implement a variant of a shift register module
     // that moves a transfer of data only if this transfer is valid.

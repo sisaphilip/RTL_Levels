@@ -22,7 +22,23 @@ module formula_1_pipe_aware_fsm_top
     wire          isqrt_y_vld;
     wire   [15:0] isqrt_y;
 
-    formula_1_pipe_aware_fsm i_formula_1_pipe_aware_fsm (.*);
+    formula_1_pipe_aware_fsm i_formula_1_pipe_aware_fsm (
+        .clk        (clk),
+        .rst        (rst),
+        .arg_vld    (arg_vld),
+        .a          (a),
+        .b          (b),
+        .c          (c),
+        .res_vld    (res_vld),
+        .res        (res),
+        
+        .isqrt_x_vld(isqrt_x_vld),
+        .isqrt_x    (isqrt_x),
+        
+        .isqrt_y_vld(isqrt_y_vld),
+        .isqrt_y    (isqrt_y    )
+
+    );
 
     isqrt # (.n_pipe_stages (4)) i_isqrt
     (
