@@ -29,69 +29,60 @@ module formula_1_impl_2_fsm
     input        [15:0] isqrt_2_y
 );
 
-// module section
 
-
-isqrt inst1(.x(isqrt_1_y));
-isqrt inst2(.x(isqrt_2_y));
-
-
-
-enum logic [2:0]
+    enum logic     [1:0 ]
     {
-        st_idle       = 3'd0,
-        st_wait_a_res = 3'd1,
-        st_wait_b_res = 3'd2,
-        st_wait_c_res = 3'd3
+     st_idle        = 2'd0,
+     st_wait_abc_res = 2'd1
+     //st_wait_c_res  = 2'd2
+     //st_wait_c_res = 3'd3
     }
     state, next_state;
 
+    //------------------------------------------------------------------------
     // Next state and isqrt interface
 
+
+    logic [15:0] sum_abc,sum_ab;
     always_comb
     begin
         next_state  = state;
 
-        {isqrt_1_x_vld,isqrt_2_x_vld} = {1'b0,1'b0};
-        {isqrt_1_x,isqrt_2_x} = {'x,'x};  // Don't care
-
+        isqrt_2_x_vld = '0;
+        isqrt_1_x_vld = '0;
+        isqrt_1_x     = 'x;  // Don't care
+        isqrt_2_x     = 'x;
         case (state)
         st_idle:
         begin
-            {isqrt_1_x,isqrt_2_x} = {a,a};
-            
+            isqrt_1_x = a;
+            isqrt_2_x = b;
+            isqrt_1_x = c;
             if (arg_vld)
             begin
-                {isqrt_1_x_vld,isqrt_2_x_vld} = {1'b1,1'b1};
-                next_state  = st_wait_a_res;
+                isqrt_1_x_vld = '1;
+                isqrt_2_x_vld = '1;
+                sum_ab       += isqrt_1_y;
+                sum_abc       = sum_ab + isqrt_2_y;
+                next_state    = st_wait_abc_res;
             end
         end
 
-        st_wait_a_res:
-        begin
-            {isqrt_1_x,isqrt_2_x} = {b,b};
 
-            if (isqrt_1_y_vld && isqrt_2_y_vld)
+ /**       st_wait_abc_res:
+        begin
+            isqrt_1_x = c;
+
+            if (isqrt_2_y_vld && isqrt_1_y_vld)
             begin
-                {isqrt_1_x_vld,isqrt_2_x_vld} = {1'b1,1'b1};
-                next_state  = st_wait_b_res;
+                isqrt_1_x_vld = '1;
+                next_state  = st_wait_c_res;
             end
         end
-
-        st_wait_b_res:
+**/
+        st_wait_abc_res:
         begin
-            {isqrt_1_x,isqrt_2_x} = {c,c};
-
             if (isqrt_1_y_vld && isqrt_2_y_vld)
-            begin
-                {isqrt_1_x_vld,isqrt_2_x_vld} = {1'b1,1'b1};
-                 next_state  = st_wait_c_res;
-            end
-        end
-
-        st_wait_c_res:
-        begin
-            if (isqrt_1_y_vld && isqrt_2_y_vld )
             begin
                 next_state = st_idle;
             end
@@ -99,25 +90,26 @@ enum logic [2:0]
         endcase
     end
  
-// Assigning nex_state to state
+// Assigning next state
     always_ff @ (posedge clk)
         if (rst)
             state <= st_idle;
         else
             state <= next_state;
 
-
+// Accumulating the result
     always_ff @ (posedge clk)
         if (rst)
-      res_vld <= '0;
+            res_vld <= '0;
         else
-      res_vld <= (state == st_wait_c_res & (isqrt_1_y_vld && isqrt_2_y_vld));
+            res_vld <= (state == st_wait_abc_res & isqrt_1_y_vld & isqrt_2_y_vld);
 
     always_ff @ (posedge clk)
         if (state == st_idle)
-            res <= '0;
+            res   <= '0;
         else if (isqrt_1_y_vld && isqrt_2_y_vld)
-            res <= res + (isqrt_1_y && isqrt_2_y);
+            res   <= isqrt_1_y + isqrt_2_y;
+
 
     // Task:
     // Implement a module that calculates the folmula from the `formula_1_fn.svh` file

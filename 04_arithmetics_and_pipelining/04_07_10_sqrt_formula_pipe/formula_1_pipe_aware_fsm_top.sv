@@ -40,7 +40,7 @@ module formula_1_pipe_aware_fsm_top
 
     );
 
-    isqrt # (.n_pipe_stages (4)) i_isqrt
+    isqrt # (.n_pipe_stages (4)) i_isqrt   //4 handles N+3 clock cycles
     (
         .clk   (  clk         ),
         .rst   (  rst         ),
