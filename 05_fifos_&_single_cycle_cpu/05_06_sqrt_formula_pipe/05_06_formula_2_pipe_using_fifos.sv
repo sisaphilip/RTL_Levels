@@ -19,7 +19,7 @@ logic [31:0] b_fifo_out;
 
 
 //fifo for b input
-flip_flop_fifo_with_counter #(.width(32),.depth(16)) b_fifo(
+flip_flop_fifo_with_counter #(.width(32),.depth(4)) b_fifo(
   .clk(clk), 
   .rst(rst),
   .push(),
@@ -35,7 +35,7 @@ logic cy_vld;
 logic [31:0] cy;
 logic [31:0] stage_i_sum, stage_i_sum_q;
 
-isqrt #(16) i_isqrt_i
+isqrt #(4) i_isqrt_i
 (                 
     .clk(clk),
     .rst(rst),
@@ -65,7 +65,7 @@ logic iiy_vld;
 logic [31:0] stage_ii_sum, stage_ii_sum_q;
 
 //---------stage 2 isqrt ---------------------------------------------------
-isqrt #(16) i_isqrt_ii
+isqrt #(4) i_isqrt_ii
 (
   .clk(clk), 
   .rst(rst),
@@ -78,7 +78,7 @@ isqrt #(16) i_isqrt_ii
 logic [31:0] a_fifo_out;
 
 //fifo for a input
-flip_flop_fifo_with_counter #(.width(32),.depth(33)) a_fifo(
+flip_flop_fifo_with_counter #(.width(32),.depth(9)) a_fifo(
   .clk(clk), 
   .rst(rst),
   .push(),
@@ -103,7 +103,7 @@ assign stage_ii_sum = iiy + a_fifo_out;
 
 //--------STAGE 3 ----------------------------------------------------------
 
-isqrt #(16) i_isqrt_iii
+isqrt #(4) i_isqrt_iii
 (
   .clk(clk),
   .rst(rst),
