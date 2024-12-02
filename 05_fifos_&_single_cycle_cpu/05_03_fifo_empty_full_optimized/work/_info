@@ -1,0 +1,36 @@
+m255
+K4
+z2
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ishfisav/Desktop/rtl_design/rtl_Levels/05_fifos_&_single_cycle_cpu/05_03_fifo_empty_full_optimized
+vfifo_monitor
+2/tmp/nvim.ishfisav/lUyF3I/4/fifo_monitor.sv
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1728279537
+!i10b 1
+!s100 T=:ZK[znOm<>`8a11ofQ<3
+IG7fXZh4?OXNL]n>[azIgV1
+S1
+R0
+w1728279537
+8/tmp/nvim.ishfisav/lUyF3I/4/fifo_monitor.sv
+F/tmp/nvim.ishfisav/lUyF3I/4/fifo_monitor.sv
+!i122 5
+L0 1 94
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1728279537.000000
+!s107 /tmp/nvim.ishfisav/lUyF3I/4/fifo_monitor.sv|
+!s90 -quiet|-lint|/tmp/nvim.ishfisav/lUyF3I/4/fifo_monitor.sv|
+!i113 0
+o-quiet -lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0
