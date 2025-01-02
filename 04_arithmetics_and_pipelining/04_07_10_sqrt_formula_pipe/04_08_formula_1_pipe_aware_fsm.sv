@@ -1,4 +1,10 @@
-// Task
+
+
+
+
+
+
+// Task SISA PASS
 module formula_1_pipe_aware_fsm
 (
     input               clk,
@@ -99,7 +105,7 @@ module formula_1_pipe_aware_fsm
         if (state == st_idle)
             res   <= '0;
         else if (isqrt_y_vld)
-            res   <= res + isqrt_y;
+            res   <=    res + isqrt_y;
 
 endmodule
 

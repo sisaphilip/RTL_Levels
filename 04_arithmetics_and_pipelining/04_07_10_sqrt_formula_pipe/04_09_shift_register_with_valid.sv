@@ -10,7 +10,6 @@ module one_bit_wide_shift_register_with_reset
     output logic out_data
 );
 logic [depth - 1:0] data;
-
 always_ff @ (posedge clk)
         if (rst)
             data <= '0;
@@ -62,23 +61,27 @@ module shift_register_with_valid
     
 );
 
-logic [width - 1:0] data [0:depth - 1];
+logic [depth - 1:0] valid;
+    logic [width - 1:0] data [0: depth - 1];
 
-    always_ff @ (posedge clk) 
+    always_ff @ (posedge clk)
+        if (rst)
+            valid <= '0;
+        else
+            valid <= {valid[depth-2:0], in_vld};
+        
+
+    always_ff @ (posedge clk)
     begin
-        if (rst) 
-        out_data  <= '0;
-        
-        else if(in_vld) begin
-        data [0]  <= in_data;
-        for (int i = 1; i < depth; i ++)
-        data [i]  <= data [i - 1];
-        end
+        data [0] <= in_data;
 
-        else if(out_vld) 
-        out_data  <= data[depth-1];
-        
-     end
+        for (int i = 1; i < depth; i ++)
+            data [i] <= data [i - 1];
+    end
+
+    assign out_vld   = valid [depth - 1];
+    assign out_data  = data  [depth - 1];
+
     // Task:
     // Implement a variant of a shift register module
     // that moves a transfer of data only if this transfer is valid.

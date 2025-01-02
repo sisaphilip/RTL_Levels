@@ -4,7 +4,7 @@ module f_less_or_equal
     output             res, err
 );
 
-    // OpCtrl values
+    //    OpCtrl values
     //    110   min
     //    101   max
     //    010   equal

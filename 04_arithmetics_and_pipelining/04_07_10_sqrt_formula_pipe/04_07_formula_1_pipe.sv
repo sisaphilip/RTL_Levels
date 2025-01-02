@@ -1,5 +1,4 @@
-// Task  PASS DO NOT CHANGE
-
+// Task 
 module formula_1_pipe
 (
     input         clk,
@@ -15,11 +14,10 @@ module formula_1_pipe
 );
 
 
-
    logic          ay_vld;
    logic   [31:0] ay;
    //instance for a
-isqrt #(.n_pipe_stages(4)) i_iqrt_a
+isqrt #(.n_pipe_stages(8)) i_iqrt_a
    (
     .clk(clk),
     .rst(rst),
@@ -33,7 +31,7 @@ isqrt #(.n_pipe_stages(4)) i_iqrt_a
    logic          by_vld;
    logic   [31:0] by;
    //instance for a
-isqrt #(.n_pipe_stages(4)) i_iqrt_b
+isqrt #(.n_pipe_stages(8)) i_iqrt_b
    (
     .clk(clk),
     .rst(rst),
@@ -47,7 +45,7 @@ isqrt #(.n_pipe_stages(4)) i_iqrt_b
    logic          cy_vld;
    logic   [31:0] cy;
    //instance for a
-isqrt #(.n_pipe_stages(4)) i_iqrt_c
+isqrt #(.n_pipe_stages(8)) i_iqrt_c
    (
     .clk(clk),
     .rst(rst),
@@ -61,18 +59,26 @@ isqrt #(.n_pipe_stages(4)) i_iqrt_c
    logic [31:0] iqrt_sum;
 
    assign  iqrt_sum = ay + by + cy;
+//   assign  res_vld  = ay_vld & by_vld & cy_vld; 
 
+
+  /*// control register
+  always_ff @(posedge clk )   
+    
+        res_vld <= i_res_vlds;
+    
+*/
+   // data path output register
    always_ff @ (posedge clk)
-       if(rst)
-           res <= '0;
-       else if (res_vld)
-           res <= iqrt_sum;
+       if(rst) begin  
+           res     <= '0;
+        
+       end
+           else if (res_vld)
+           res     <= iqrt_sum;
+endmodule
 
-
-
-
-   
-  // Task:
+    // Task:
     // Implement a pipelined module formula_1_pipe that computes result
     // of the formula defined in the file formula_1_fn.svh.
     // The requirements:
@@ -94,5 +100,3 @@ isqrt #(.n_pipe_stages(4)) i_iqrt_c
     // FPGA-Systems Magazine :: FSM :: Issue ALFA (state_0)
     // You can download this issue from https://fpga-systems.ru/fsm
 
-
-endmodule
