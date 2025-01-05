@@ -18,17 +18,17 @@ module formula_2_pipe_using_fifos
 logic [31:0] b_fifo_out;
 logic poped_b_vld;
 logic c_b_out_vld, c_b_out_vld_delayed;
-
+logic b_fifo_empty, b_fifo_full;
 //fifo for b input
-flip_flop_fifo_with_counter #(.width(32),.depth(16)) b_fifo(
+flip_flop_fifo_with_counter #(.width(32),.depth(8)) b_fifo(
   .clk(clk), 
   .rst(rst),
   .push(arg_vld),
   .pop(poped_b_vld),
   .write_data(b),
   .read_data(b_fifo_out),
-  .empty(),
-  .full());
+  .empty(b_fifo_empty),
+  .full(b_fifo_full));
 
 // sqrt fn for c
 
@@ -36,7 +36,7 @@ logic cy_vld;
 logic [31:0] cy;
 logic [31:0] stage_i_sum, stage_i_sum_q;
 
-isqrt #(.n_pipe_stages(16)) i_isqrt_i
+isqrt #(.n_pipe_stages(8)) i_isqrt_i
 (                 
     .clk(clk),
     .rst(rst),
@@ -47,11 +47,11 @@ isqrt #(.n_pipe_stages(16)) i_isqrt_i
 );
  
  assign stage_i_sum = cy + b_fifo_out;    
- assign c_b_out_vld = cy_vld & poped_b_vld;
+ assign c_b_out_vld = cy_vld & poped_b_vld & ~b_fifo_empty;
  //stage 1 register
   
- always_ff @(posedge clk)
-   if (rst) begin
+ always_ff @(posedge clk )
+   if (rst | b_fifo_empty) begin
      c_b_out_vld_delayed <= '0;    
      stage_i_sum_q       <= '0;
        end
@@ -67,7 +67,7 @@ logic iiy_vld;
 logic [31:0] stage_ii_sum, stage_ii_sum_q;
 
 //stage 2 isqrt 
-isqrt #(.n_pipe_stages(16)) i_isqrt_ii
+isqrt #(.n_pipe_stages(8)) i_isqrt_ii
 (
   .clk(clk), 
   .rst(rst),
@@ -80,24 +80,27 @@ isqrt #(.n_pipe_stages(16)) i_isqrt_ii
 logic [31:0] a_fifo_out;
 logic        poped_a_vld;
 logic        c_b_a_out_vld,c_b_a_out_vld_delayed;
+logic        a_fifo_empty, a_fifo_full;
+
+
 //fifo for a input
-flip_flop_fifo_with_counter #(.width(32),.depth(33)) a_fifo(
+flip_flop_fifo_with_counter #(.width(32),.depth(17)) a_fifo(
   .clk(clk), 
   .rst(rst),
   .push(arg_vld),
   .pop(poped_a_vld),
   .write_data(a),
   .read_data(a_fifo_out),
-  .empty(),
-  .full());
+  .empty(a_fifo_empty),
+  .full(a_fifo_full));
 
 
 assign stage_ii_sum  = iiy + a_fifo_out;
-assign c_b_a_out_vld = poped_a_vld & iiy_vld;
+assign c_b_a_out_vld = poped_a_vld & iiy_vld & ~a_fifo_empty;
 //stage 2 register
 
  always_ff @(posedge clk)
-   if (rst) begin
+   if (rst | a_fifo_empty) begin
          stage_ii_sum_q        <= '0;
          c_b_a_out_vld_delayed <= '0;
        end
@@ -106,9 +109,9 @@ assign c_b_a_out_vld = poped_a_vld & iiy_vld;
          c_b_a_out_vld_delayed <= c_b_a_out_vld;
        end
 
-//--------STAGE 3 ----------------------------------------------------------
+//--------STAGE iii ----------------------------------------------------------
 
-isqrt #(.n_pipe_stages(16)) i_isqrt_iii
+isqrt #(.n_pipe_stages(8)) i_isqrt_iii
 (
   .clk(clk),
   .rst(rst),
