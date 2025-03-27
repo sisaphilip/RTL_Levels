@@ -54,6 +54,7 @@ isqrt #(.n_pipe_stages(8)) i_isqrt_i
    if (rst | b_fifo_empty) begin
      c_b_out_vld_delayed <= '0;    
      stage_i_sum_q       <= '0;
+     
        end
        else begin 
          stage_i_sum_q       <= stage_i_sum;
@@ -103,6 +104,7 @@ assign c_b_a_out_vld = poped_a_vld & iiy_vld & ~a_fifo_empty;
    if (rst | a_fifo_empty) begin
          stage_ii_sum_q        <= '0;
          c_b_a_out_vld_delayed <= '0;
+      
        end
        else begin
          stage_ii_sum_q        <= stage_ii_sum;

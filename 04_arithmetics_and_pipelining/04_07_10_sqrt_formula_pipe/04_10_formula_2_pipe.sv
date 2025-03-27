@@ -110,6 +110,7 @@ logic       c_b_a_out_vld;
       c_b_a_out_vld_delayed <= c_b_a_out_vld;
   end   
 
+//------------------stage 3-------------------------------------------
 
 isqrt #(.n_pipe_stages(8)) inst_isqrt_sum_a_isqrt_b_plus_isqrt_c
 (

@@ -57,22 +57,25 @@ isqrt #(.n_pipe_stages(8)) i_iqrt_c
 
 
    logic [31:0] iqrt_sum;
+   logic        i_res_vlds;
 
-   assign  iqrt_sum = ay + by + cy;
-//   assign  res_vld  = ay_vld & by_vld & cy_vld; 
+   assign  iqrt_sum   = ay + by + cy;
+   assign  i_res_vld  = ay_vld & by_vld & cy_vld; 
 
 
-  /*// control register
-  always_ff @(posedge clk )   
-    
-        res_vld <= i_res_vlds;
+  // control register
+ /* always_ff @(posedge clk or posedge rst )   
+      if (rst)
+          res_vld <= 1'b0;
+      else
+        res_vld   <= i_res_vlds;
     
 */
    // data path output register
    always_ff @ (posedge clk)
        if(rst) begin  
            res     <= '0;
-        
+       
        end
            else if (res_vld)
            res     <= iqrt_sum;
