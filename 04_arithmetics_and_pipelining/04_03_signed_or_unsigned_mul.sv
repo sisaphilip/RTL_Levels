@@ -120,7 +120,7 @@ module testbench;
       for (int j = smin; j <= smax; j ++)
         test (i, j, 1);
 
-      $display ("%s PASS", `__FILE__);
+      $display ("%s                                PASS", `__FILE__);
       $finish;
     end
 

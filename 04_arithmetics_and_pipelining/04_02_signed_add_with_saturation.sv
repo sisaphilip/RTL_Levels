@@ -127,7 +127,7 @@ module testbench;
       test ( -4,  4,  0);
       test ( -4, -4, -8);
 
-      $display ("%s PASS", `__FILE__);
+      $display ("%s                            PASS", `__FILE__);
       $finish;
     end
 

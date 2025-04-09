@@ -314,7 +314,7 @@ module formula_tb
         if (queue.size () == 0)
         begin
             if (run_completed)
-                $display ("%s PASS", test_id);
+                $display ("%s                    PASS", test_id);
             else
                 $display ("%s FAIL: did not run or run was not completed",
                     test_id);

@@ -85,7 +85,7 @@ module testbench;
         $finish;
       end
     end
-    $display ("%s PASS", `__FILE__);
+    $display ("%s                 PASS", `__FILE__);
     $finish;
   end
 endmodule
