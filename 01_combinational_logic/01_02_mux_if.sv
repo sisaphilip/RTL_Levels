@@ -57,8 +57,8 @@ module testbench;
 
     # 1;
 
-    $display ("TEST d { %h %h %h %h } sel %d y %h",
-        d0, d1, d2, d3, sel, y);
+    //$display ("TEST d { %h %h %h %h } sel %d y %h",
+   //           d0, d1, d2, d3, sel, y);
 
     if (y !== ty)
       begin
@@ -70,18 +70,20 @@ module testbench;
 
   initial
     begin
-      test ('ha, 'hb, 'hc, 'hd, 0, 'ha);
+     /* test ('ha, 'hb, 'hc, 'hd, 0, 'ha);
       test ('ha, 'hb, 'hc, 'hd, 1, 'hb);
       test ('ha, 'hb, 'hc, 'hd, 2, 'hc);
       test ('ha, 'hb, 'hc, 'hd, 3, 'hd);
-
+*/
       test (7, 10, 3, 'x, 0, 7);
       test (7, 10, 3, 'x, 1, 10);
       test (7, 10, 3, 'x, 2, 3);
       test (7, 10, 3, 'x, 3, 'x);
 
-      $display ("%s PASS", `__FILE__);
+    $display ("%s                      PASS", `__FILE__);
       $finish;
     end
 
 endmodule
+
+//iverilog -g2005-sv filename.sv

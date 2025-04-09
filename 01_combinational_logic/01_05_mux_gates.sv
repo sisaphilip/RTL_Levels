@@ -100,7 +100,7 @@ module testbench;
       test (7, 10, 3, 'x, 2, 3);
       test (7, 10, 3, 'x, 3, 'x);
 
-      $display ("%s PASS", `__FILE__);
+      $display ("%s                   PASS", `__FILE__);
       $finish;
     end
 endmodule

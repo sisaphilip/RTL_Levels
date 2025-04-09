@@ -5,7 +5,7 @@ Forked from [https://github.com/yuri-panchul/systemverilog-homework](https://git
 
 
 ## Combinational logic
-![](Combinational_PASS.png)
+![](Combinational__PASS.png)
 
 ## Sequencial logic
 ![](Sequencial_PASS.png)
