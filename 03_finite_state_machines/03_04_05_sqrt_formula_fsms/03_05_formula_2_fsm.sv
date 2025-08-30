@@ -37,12 +37,12 @@ module formula_2_fsm
   
 
 isqrt #(4) _inst_isqrt(
-    .clk(clk),
-    .rst(rst),
-    .x_vld(isqrt_x_vld),
-    .x(isqrt_x),
-    .y_vld(isqrt_y_vld),
-    .y(isqrt_y)
+    .clk  (clk         ),
+    .rst  (rst         ),
+    .x_vld(isqrt_x_vld ),
+    .x    (isqrt_x     ),
+    .y_vld(isqrt_y_vld ),
+    .y    (isqrt_y     )
 
 
 );

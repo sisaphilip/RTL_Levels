@@ -72,11 +72,14 @@ module testbench;
     begin
       a <= seq_a [i];
       @ (posedge clk);
-      $display ("%b %b (%b) %b (%b)",
+  
+      //by sisa
+      /* $display ("%b %b (%b) %b (%b)",
         a,
         pd_detected,   seq_posedge         [i],
         ocpd_detected, seq_one_cycle_pulse [i]);
-     
+     */
+
       if (   pd_detected   !== seq_posedge         [i]
           || ocpd_detected !== seq_one_cycle_pulse [i])
         

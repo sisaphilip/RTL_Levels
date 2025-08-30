@@ -114,12 +114,12 @@ logic       c_b_a_out_vld;
 
 isqrt #(.n_pipe_stages(8)) inst_isqrt_sum_a_isqrt_b_plus_isqrt_c
 (
-    .clk(clk),
-    .rst(rst),
+    .clk  (clk                  ),
+    .rst  (rst                  ),
     .x_vld(c_b_a_out_vld_delayed),
-    .x(delayed_stage_ii),
-    .y_vld(res_vld),
-    .y(res)
+    .x    (delayed_stage_ii     ),
+    .y_vld(res_vld              ),
+    .y    (res                  )
 );
 
 

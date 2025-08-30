@@ -18,9 +18,9 @@ module or_gate_using_mux
     output o
 );
 
-parameter in_1 = 0;
-parameter in_2 = 1;
-mux inst1 (.d0(b), .d1(in_2), .sel(a), .y(o));
+logic D1_VALUE = '1;
+
+mux inst1 (.d0(b), .d1(D1_VALUE), .sel(a), .y(o));
 
 
 

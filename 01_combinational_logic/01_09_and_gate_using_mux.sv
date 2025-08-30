@@ -4,30 +4,22 @@ module mux
   input  sel,
   output y
 );
-
   assign y = sel ? d1 : d0;
 
 endmodule
 
 //----------------------------------------------------------------------------
-
 module and_gate_using_mux
 (
     input  a,
     input  b,
     output o
 );
-parameter in_1 = 0;
-parameter in_2 = 1;
+    logic D0_VALUE = '0;
 
-  mux inst1(.d0(in_1), .d1(b), .sel(a), .y(o));
-
-
-
-
+    mux inst1(.d0(D0_VALUE), .d1(b), .sel(a), .y(o));
 
   // TODO
-
   // Implement and gate using instance(s) of mux,
   // constants 0 and 1, and wire connections
 

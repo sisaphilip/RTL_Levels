@@ -60,7 +60,6 @@ module testbench;
     forever
       # 500 clk = ~ clk;
   end
-
   logic rst;
 
   initial
@@ -71,11 +70,14 @@ module testbench;
     repeat (2) @ (posedge clk);
     rst <= '0;
   end
+
   logic [15:0] f1_num, f2_num, f2_num2;
   fibonacci   f1 (.num (f1_num), .*);
   fibonacci_2 f2 (.num (f2_num), .num2 (f2_num2), .*);
   localparam n = 10;
   logic [15:0] fifo1 [$], fifo2 [$];
+  
+
   initial
   begin
     @ (negedge rst);
@@ -107,3 +109,5 @@ module testbench;
   end
 
 endmodule
+
+

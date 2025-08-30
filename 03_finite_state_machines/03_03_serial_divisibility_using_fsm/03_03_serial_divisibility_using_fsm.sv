@@ -1,7 +1,6 @@
 //----------------------------------------------------------------------------
 // Example
 //----------------------------------------------------------------------------
-
 module serial_divisibility_by_3_using_fsm
 (
   input  clk,
@@ -9,9 +8,9 @@ module serial_divisibility_by_3_using_fsm
   input  new_bit,
   output div_by_3
 );
-
   // States
-  enum logic[1:0]
+  // states encode 0, 1, 2 which are the olny remainder of dividing by 3
+  enum logic[1:0]    
   {
      mod_0 = 2'b00,
      mod_1 = 2'b01,
@@ -27,13 +26,21 @@ module serial_divisibility_by_3_using_fsm
     // This lint warning is bogus because we assign the default value above
     // verilator lint_off CASEINCOMPLETE
 
-    case (state)
-      mod_0 : if(new_bit) new_state = mod_1;
-              else        new_state = mod_0;
-      mod_1 : if(new_bit) new_state = mod_0;
-              else        new_state = mod_2;
-      mod_2 : if(new_bit) new_state = mod_2;
-              else        new_state = mod_1;
+    case (new_state)
+      mod_0 : if(new_bit)
+              new_state = mod_1;
+              else
+              new_state = mod_0;
+     
+      mod_1 : if(new_bit)
+              new_state = mod_0;
+              else
+              new_state = mod_2;
+      
+      mod_2 : if(new_bit)
+              new_state = mod_2;
+              else
+              new_state = mod_1;
     endcase
 
     // verilator lint_on CASEINCOMPLETE
@@ -41,7 +48,7 @@ module serial_divisibility_by_3_using_fsm
   end
 
   // Output logic
-  assign div_by_3 = state == mod_0;
+  // assign div_by_3 = state == mod_0;
 
   // State update
   always_ff @ (posedge clk)
@@ -49,6 +56,8 @@ module serial_divisibility_by_3_using_fsm
       state <= mod_0;
     else
       state <= new_state;
+   //output logic
+    assign div_by_3 = state == mod_0;
 
 endmodule
 
@@ -63,11 +72,12 @@ module serial_divisibility_by_5_using_fsm
   input  new_bit,
   output div_by_5
 );
-
+// when deviding by 5 remainders 0, 1, 2, 3, & 4 will form states of interest
+//
 enum logic[2:0]
   {
-     mod_0 = 3'b000, mod_1 = 3'b001, mod_2 = 3'b010, mod_3 = 3'b011,
-     mod_4 = 3'b100
+     MOD_0 = 3'b000, MOD_1 = 3'b001, MOD_2 = 3'b010, MOD_3 = 3'b011,
+     MOD_4 = 3'b100
   }
   state, new_state;
 
@@ -77,32 +87,44 @@ enum logic[2:0]
     new_state = state;
 
     case (state)
-      mod_0 : if(new_bit) new_state = mod_1;
-              else        new_state = mod_0;
+      MOD_0 : if(new_bit) 
+              new_state = MOD_1;
+              else
+              new_state = MOD_0;
       
-      mod_1 : if(new_bit) new_state = mod_3;
-              else        new_state = mod_2;
+      MOD_1 : if(new_bit) 
+              new_state = MOD_3;
+              else
+              new_state = MOD_2;
       
-      mod_2 : if(new_bit) new_state = mod_0;
-              else        new_state = mod_4;
+      MOD_2 : if(new_bit) 
+              new_state = MOD_0;
+              else  
+              new_state = MOD_4;
       
-      mod_3 : if(new_bit) new_state = mod_2;
-              else        new_state = mod_1;
+      MOD_3 : if(new_bit)
+              new_state = MOD_2;
+              else
+              new_state = MOD_1;
 
-      mod_4 : if(new_bit) new_state = mod_4;
-              else        new_state = mod_3;
+      MOD_4 : if(new_bit) 
+              new_state = MOD_4;
+              else
+              new_state = MOD_3;
             endcase
   end
 
-  // Output logic
-  assign div_by_5 = state == mod_0;
-
-  // State update
+    // State update
   always_ff @ (posedge clk)
     if (rst)
-      state <= mod_0;
+      state <= MOD_0;
     else
       state <= new_state;
+  
+
+  // Output logic
+  assign div_by_5 = state == MOD_0;
+  endmodule
 
   // Implement a module that performs a serial test if input number is divisible by 5.
   //
@@ -113,7 +135,6 @@ enum logic[2:0]
   // It is similar to the multiplication of the number by 2*X or by 2*X + 1.
   //
   // Hint 2: As we are interested only in the remainder, all operations are performed under the modulo 5 (% 5).
-  // Check manually how the remainder changes under such modulo.
+   // Check manually how the remainder changes under such modulo.
 
 
-endmodule
