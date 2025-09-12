@@ -86,7 +86,7 @@ enum logic[2:0]
   begin
     new_state = state;
 
-    case (state)
+    case (new_state)
       MOD_0 : if(new_bit) 
               new_state = MOD_1;
               else

@@ -8,19 +8,10 @@
         modules from the arithmetic_block_wrappers directory.
 
         */
-module challenge(
-        input        clk, rst, arg_vld,
-        input        [FLEN - 1:0] a,
-        input        [FLEN - 1:0] b,
-        input        [FLEN - 1:0] c,
-
-        output logic              res_vld,
-        output logic [FLEN - 1:0] res);
-    
-// Shift register with valid borrowed from 04_09
-module shift_register_with_valid # (       
+//Shift register with valid borrowed from 04_09
+module shift_register_with_valid #(       
         parameter width = 8, depth = 8)(
-        input             clk, rst, in_vld,
+        input                      clk, rst, in_vld,
         input        [width - 1:0] in_data,
         output                     out_vld,
         output logic [width - 1:0] out_data);
@@ -42,161 +33,203 @@ module shift_register_with_valid # (
         assign out_data  = data  [depth - 1];
         endmodule
 
-//----------------------------stage i------------------------------------
-        logic [FLEN - 0]  a_square;
-        logic [FLEN - 0]a_square_Q;
-        logic [FLEN - 0]a_i_delayed;
+
+module challenge(
+        input                     clk, rst, arg_vld,
+        input        [FLEN - 1:0] a,
+        input        [FLEN - 1:0] b,
+        input        [FLEN - 1:0] c,
+
+        output logic              res_vld,
+        output logic [FLEN - 1:0] res);
+    
+//----------------------------stage_i------------------------------------------------------
+        logic [FLEN - 0]   a_square;
+        logic [FLEN - 0] a_square_Q;
+        logic [FLEN - 0]a_i_Q;
+        logic           a_square_vld, a_square_vld_Q, arg_vld_Q;
         f_mult inst_i (
-        .clk       (    clk       )
-        .rst       (    rst       )
-        .a         (    a         )
-        .b         (    a         )
-        .up_valid  (              )
-        .res       (    a_square  )
-        .down_valid(              )
-        .busy      (              )
-        .error     (              ));
+        .clk       (    clk         ),
+        .rst       (    rst         ),
+        .a         (    a           ),
+        .b         (    a           ),
+        .up_valid  (    arg_vld     ),
+        .res       (    a_square    ),
+        .down_valid(    a_square_vld),
+        .busy      (                ),
+        .error     (                ));
         //stage i register
         always_ff @(posedge clk)
-        if (rst) a_square_Q      <= '0;
+        if (rst) a_square_Q <= '0;
         else begin
-        a_square_Q   <= a_square;
-        a_i_delayed  <= a; end
+        arg_vld_Q       <= arg_vld;
+        a_square_vld_Q  <= a_square_vld;
+        a_square_Q      <= a_square;
+        a_i_Q           <= a; end
 
-//----------------------------stage ii------------------------------------
+//----------------------------stage ii-------------------------------------------------------
         logic [FLEN - 0]  a_cubed;
         logic [FLEN - 0]a_cubed_Q;
-        logic [FLEN - 0]a_ii_delayed;
+        logic [FLEN - 0]a_ii_Q;
+        logic           ii_up_valid, a_cubed_vld, a_cubed_vld_Q,a_ii_Q_vld;
+
+        assign ii_up_valid = arg_vld_Q & a_square_vld_Q;
         f_mult inst_ii (
-        .clk       (    clk        )
-        .rst       (    rst        )
-        .a         (    a_square_Q )
-        .b         (    a_i_delayed)
-        .up_valid  (               )
-        .res       (    a_cubed    ) 
-        .down_valid(               )
-        .busy      (               )
-        .error     (               ));
+        .clk       (    clk         ),
+        .rst       (    rst         ),
+        .a         (    a_square_Q  ),
+        .b         (    a_i_Q       ),
+        .up_valid  (    ii_up_valid ),
+        .res       (    a_cubed     ),
+        .down_valid(    a_cubed_vld ),
+        .busy      (                ),
+        .error     (                ));
         //stage ii register
         always_ff @(posedge clk)
         if (rst) a_cubed_Q <= '0;
         else  begin 
+        a_ii_Q_vld   <= arg_vld_Q;
+        a_cubed_vld_Q<= a_cubed_vld;
         a_cubed_Q    <= a_cubed;
-        a_ii_delayed <= a_i_delayed; end
+        a_ii_Q       <= a_i_Q; end
 
-//----------------------------stage iii------------------------------------
+//----------------------------stage_iii----------------------------------------------------
         logic [FLEN - 0]  a_fourth;
         logic [FLEN - 0]a_fourth_Q;
-        logic [FLEN - 0]a_iii_delayed;
+        logic [FLEN - 0]a_iii_Q;
+        logic           iii_up_valid, a_fourth_vld, a_fourth_vld_Q, a_iii_vld_Q;
+
+        assign iii_up_valid = a_cubed_vld_Q & a_ii_Q_vld;
         f_mult inst_iii (
-        .clk       (    clk         )
-        .rst       (    rst         )
-        .a         (    a_cubed_Q   )
-        .b         (    a_ii_delayed)
-        .up_valid  (                )
-        .res       (    a_fourth    ) 
-        .down_valid(                )
-        .busy      (                )
-        .error     (                ));
+        .clk       (    clk          ),
+        .rst       (    rst          ),
+        .a         (    a_cubed_Q    ),
+        .b         (    a_ii_Q       ),
+        .up_valid  (    iii_up_valid ),
+        .res       (    a_fourth     ),
+        .down_valid(    a_fourth_vld ),
+        .busy      (                 ),
+        .error     (                 ));
         //stage iii register
         always_ff @(posedge clk)
         if (rst) a_fourth_Q <= '0;
         else begin
+        a_fourth_vld_Q<= a_fourth_vld;
         a_fourth_Q    <= a_fourth;
-        a_iii_delayed <= a_ii_delayed; end
+        a_iii_vld_Q   <= a_ii_Q_vld;
+        a_iii_Q       <= a_ii_Q; end
 
         
-//----------------------------stage iv------------------------------------
-        logic [FLEN - 0]  a_fifth;
-        logic [FLEN - 0]a_fifth_Q;
+//----------------------------stage_iv-----------------------------------------------------
+        logic [FLEN - 0]  a_fifth, a_fifth_Q;
+        logic             a_fifth_vld, iv_up_valid, a_fifth_vld_Q; 
+
+        assign iv_up_valid = a_iii_vld_Q & a_fourth_vld_Q;
         
         f_mult inst_iv (
-        .clk       (    clk          )
-        .rst       (    rst          )
-        .a         (    a_fourth_Q   )
-        .b         (    a_iii_delayed)
-        .up_valid  (                 )
-        .res       (    a_fifth      ) 
-        .down_valid(                 )
-        .busy      (                 )
+        .clk       (    clk          ),
+        .rst       (    rst          ),
+        .a         (    a_fourth_Q   ),
+        .b         (    a_iii_Q      ),
+        .up_valid  (    iv_up_valid  ),
+        .res       (    a_fifth      ) ,
+        .down_valid(    a_fifth_vld  ),
+        .busy      (                 ),
         .error     (                 ));
-        //stage iv register
         always_ff @(posedge clk)
-        if (rst) a_fifth_Q <= '0;
-        else     a_fifth_Q <= a_fifth;
+        if (rst) 
+        a_fifth_Q <= '0;
+        else begin a_fifth_Q <= a_fifth;
+        a_fifth_vld_Q        <= a_fifth_vld; end
 
-        logic [FLEN - 0 ]b_delayed, b_shifted;                  // b_values logic
-        logic            b_shifted_vld;
-        shift_register_with_valid # (.width(FLEN), .depth(3)) inst_b(
+
+        logic [FLEN - 0 ]b_shifted, b_shifted_Q;                  // b_values logic
+        logic            b_shifted_vld, b_shifted_vld_Q;
+        shift_register_with_valid #(.width(FLEN), .depth(3)) inst_b(
         .clk        (  clk           ),
         .rst        (  rst           ),
         .in_vld     (  arg_vld       ),
         .in_data    (  b             ), 
         .out_vld    (  b_shifted_vld ),
         .out_data   (  b_shifted     ));
-        
-        always_ff @(posedge clk)
-        if(rst) b_delayed <= '0;
-        else    b_delayed <= b_shifted;
+     
+        always_ff@(posedge clk)
+        if(rst)
+        b_shifted_Q <= '0;
+        else begin 
+        b_shifted_Q     <= b_shifted;
+        b_shifted_vld_Q <= b_shifted_vld; end
 
-        logic [FLEN - 0 ]b_mult, b_mult_delayed;
+        logic [FLEN - 0 ]b_mult, b_mult_Q;
+        logic            b_mult_vld, b_mult_vld_Q;
         f_mult inst_b_mult (
-        .clk       (    clk        )
-        .rst       (    rst        )
-        .a         (    b_delayed  )
-        .b         (    0.3        )
-        .up_valid  (               )
-        .res       (    b_mult     ) 
-        .down_valid(               )
-        .busy      (               )
-        .error     (               ));
+        .clk       (    clk                 ),
+        .rst       (    rst                 ),
+        .a         (    b_shifted_Q         ),
+        .b         (    0.3                 ),
+        .up_valid  (    b_shifted_vld_Q     ),
+        .res       (    b_mult              ),
+        .down_valid(    b_mult_vld          ),
+        .busy      (                        ),
+        .error     (                        ));
      
         always_ff @(posedge clk)
-        if(rst) b_mult_delayed <= '0;
-        else    b_mult_delayed <= b_mult;
+        if(rst) b_mult_Q <= '0;
+        else  begin
+        b_mult_Q    <= b_mult;
+        b_mult_vld_Q<= b_mult_vld; end
 
-        logic [FLEN - 0 ]c_delayed, c_shifted;                  // c_values logic
-        logic            c_shifted_vld;
-        shift_register_with_valid  # (.width(FLEN), .depth(4)) inst_c(
-        .clk        (  clk           ),
-        .rst        (  rst           ),
-        .in_vld     (  arg_vld       ),
-        .in_data    (  c             ), 
-        .out_vld    (  c_shifted_vld ),
-        .out_data   (  c_shifted     ));
+//------adding 0.3b and  a^5-----------------stage v-------------------------------
+        logic [FLEN - 0] ab_sum, ab_sum_Q;
+        logic            ab_sum_vld, v_up_valid, v_down_vld, v_down_vld_Q;
+
+        assign v_up_vld = b_mult_vld_Q & a_fifth_vld_Q; 
         
-        always_ff @(posedge clk)
-        if(rst) c_delayed <= '0;
-        else    c_delayed <= c_shifted;
-
-        //adding 0.3b and a^5
-        logic [FLEN - 0] ab_sum, ab_sum_delayed;
-        logic            ab_sum_vld;
-
+        
         f_add inst_ab (
         .clk          (  clk           ),
         .rst          (  rst           ),
         .a            (  a_fifth_Q     ),
-        .b            (  b_mult_delayed),
-        .up_valid     (                ),
+        .b            (  b_mult_Q      ),
+        .up_valid     (  v_up_vld      ),
         .res          (  ab_sum        ),
-        .down_valid   (                ),
+        .down_valid   (  v_down_vld    ),
         .busy         (                ),
         .error        (                ));
         
-        alway_ff @ (posedge clk)
-        if (rst) ab_sum_delayed <= '0;
-        else     ab_sum_delayed <= ab_sum;
+        always_ff @ (posedge clk)
+        if (rst) ab_sum_Q <= '0;
+        else   begin   ab_sum_Q <= ab_sum;
+        v_down_vld_Q <= v_down_vld; end 
+
+        logic [FLEN - 0 ]c_shifted_Q, c_shifted;                  // c_values logic
+        logic            c_shifted_vld, c_shifted_vld_Q;
+        shift_register_with_valid  #(.width(FLEN), .depth(5)) inst_c(
+        .clk        (  clk            ),
+        .rst        (  rst            ),
+        .in_vld     (  arg_vld        ),
+        .in_data    (  c              ), 
+        .out_vld    (  c_shifted_vld  ),
+        .out_data   (  c_shifted      ));
         
-        //adding sum of 0.3b & a^5  with c value
+        always_ff @(posedge clk)
+        if(rst) c_shifted_Q <= '0;
+        else  begin   c_shifted_Q <= c_shifted;
+        c_shifted_vld_Q <= c_shifted_vld; end
+
+
+//------adding sum of 0.3b & a^5  with c value-------stage vi----------------
+        logic  vi_up_vld;
+        assign vi_up_vld =  c_shifted_vld_Q & v_down_vld_Q;
+
         f_add inst_ab_and_c (
         .clk          (  clk            ),
         .rst          (  rst            ),
-        .a            (  ab_sum_delayed ),
-        .b            (  c_delayed      ),
-        .up_valid     (                 ),
+        .a            (  ab_sum_Q       ),
+        .b            (  c_shifted_Q    ),
+        .up_valid     (  vi_up_vld      ),
         .res          (  res            ),
-        .down_valid   (                 ),
+        .down_valid   (  res_vld        ),
         .busy         (                 ),
         .error        (                 ));
  
