@@ -1,7 +1,27 @@
-challenge.sv:83: syntax error
-challenge.sv:1: error: Syntax error in variable list.
-challenge.sv:118: syntax error
-challenge.sv:117: error: Syntax error in left side of continuous assignment.
-challenge.sv:255: syntax error
-challenge.sv:257: error: Invalid module item.
+arithmetic_block_wrappers/f_add.sv:40: warning: Port 12 (SetFflagsM) of wally_fpu expects 5 bits, got 1.
+arithmetic_block_wrappers/f_add.sv:40:        : Padding 4 high bits of the port.
+challenge.sv:159: error: res_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:140:      : res_rdy_Q is declared here as wire.
+challenge.sv:161: error: arg_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:140:      : arg_rdy_Q is declared here as wire.
+challenge.sv:192: error: ii_arg_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:172:      : ii_arg_rdy_Q is declared here as wire.
+challenge.sv:193: error: ii_res_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:172:      : ii_res_rdy_Q is declared here as wire.
+challenge.sv:194: error: ii_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:172:      : ii_rdy_Q is declared here as wire.
+challenge.sv:225: error: iii_arg_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:205:      : iii_arg_rdy_Q is declared here as wire.
+challenge.sv:226: error: iii_res_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:205:      : iii_res_rdy_Q is declared here as wire.
+challenge.sv:255: error: iv_res_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:236:      : iv_res_rdy_Q is declared here as wire.
+challenge.sv:256: error: iv_arg_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:236:      : iv_arg_rdy_Q is declared here as wire.
+challenge.sv:334: error: v_res_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:313:      : v_res_rdy_Q is declared here as wire.
+challenge.sv:335: error: v_arg_rdy_Q is not a valid l-value in testbench.dut.
+challenge.sv:313:      : v_arg_rdy_Q is declared here as wire.
+testbench.sv:46: warning: output port arg_rdy is coerced to inout.
+11 error(s) during elaboration.
 a.out: Unable to open input file.

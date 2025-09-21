@@ -1,181 +1,120 @@
-/*
+//flip_flop_fifo_with_counter & fifo_moniter borrowed from 05_01 
+module flip_flop_fifo_with_counter # (parameter width = 8, depth = 10)(
+        input                clk,
+        input                rst,
+        input                push,
+        input                pop,
+        input  [width - 1:0] write_data,
+        output [width - 1:0] read_data,
+        output               empty,
+        output               full);
 
-Put any submodules you need here.
-
-You are not allowed to implement your own submodules or functions for the addition,
-subtraction, multiplication, division, comparison or getting the square
-root of floating-point numbers. For such operations you can only use the
-modules from the arithmetic_block_wrappers directory.
-
-*/
-
-module flip_flop_fifo_with_counter
-# (
-    parameter width = 8, depth = 10
-)
-(
-    input                clk,
-    input                rst,
-    input                push,
-    input                pop,
-    input  [width - 1:0] write_data,
-    output [width - 1:0] read_data,
-    output               empty,
-    output               full
-);
-
-//------------------------------------------------------------------------
-// $clog2 for minimum address width that can cover memory size
-    localparam pointer_width = $clog2 (depth),    
-               counter_width = $clog2 (depth + 1);  
-               
-    localparam [counter_width - 1:0] max_ptr = counter_width' (depth - 1);
-
-//------------------------------------------------------------------------
-
-    logic [pointer_width - 1:0] wr_ptr, rd_ptr;
-    logic [counter_width - 1:0] cnt;
-
-    logic [width - 1:0] data [0: depth - 1];
-
-
-//------------------------------------------------------------------------
-
-    always_ff @ (posedge clk or posedge rst)
+        //------------------------------------------------------------------------
+        // $clog2 for minimum address width that can cover memory size
+        localparam pointer_width = $clog2 (depth),    
+        counter_width = $clog2 (depth + 1);  
+        localparam [counter_width - 1:0] max_ptr = counter_width' (depth - 1);
+        //------------------------------------------------------------------------
+        logic [pointer_width - 1:0] wr_ptr, rd_ptr;
+        logic [counter_width - 1:0] cnt;
+        logic [width - 1:0] data [0: depth - 1];
+        //------------------------------------------------------------------------
+        always_ff @ (posedge clk or posedge rst)
         if (rst)
-            wr_ptr <= '0;
+        wr_ptr <= '0;
         else if (push)
-            wr_ptr <= wr_ptr == max_ptr ? '0 : wr_ptr + 1'b1;
-
-    always_ff @ (posedge clk or posedge rst)
+        wr_ptr <= wr_ptr == max_ptr ? '0 : wr_ptr + 1'b1;
+       
+        always_ff @ (posedge clk or posedge rst)
         if (rst)
-            rd_ptr <= '0;
+        rd_ptr <= '0;
         else if (pop)
-            rd_ptr <= rd_ptr == max_ptr ? '0 : rd_ptr + 1'b1;
-
-//------------------------------------------------------------------------
-
-    always_ff @ (posedge clk)
+        rd_ptr <= rd_ptr == max_ptr ? '0 : rd_ptr + 1'b1;
+        //------------------------------------------------------------------------
+        always_ff @ (posedge clk)
         if (push)
-            data [wr_ptr] <= write_data;
-
-    assign read_data = data [rd_ptr];
-
-//------------------------------------------------------------------------
-
-    always_ff @ (posedge clk or posedge rst)
+        data [wr_ptr] <= write_data;
+        assign read_data = data [rd_ptr];
+        //------------------------------------------------------------------------
+        always_ff @ (posedge clk or posedge rst)
         if (rst)
-            cnt <= '0;
+        cnt <= '0;
         else if (push & ~ pop)
-            cnt <= cnt + 1'b1;
+        cnt <= cnt + 1'b1;
         else if (pop & ~ push)
-            cnt <= cnt - 1'b1;
+        cnt <= cnt - 1'b1;
+        //------------------------------------------------------------------------
+        assign empty = (cnt == '0);  // Same as "~| cnt"
+        assign full = (cnt == depth);
+        endmodule
 
-//------------------------------------------------------------------------
+module fifo_monitor#(parameter width = 1,depth = 0,allow_push_when_full_with_pop = 0)(
+        input               clk,
+        input               rst,
+        input               push,
+        input               pop,
+        input [width - 1:0] write_data,
+        input [width - 1:0] read_data,
+        input               empty,
+        input               full);
 
+        logic [width - 1:0] queue [$];
+        logic [width - 1:0] dummy;
 
-    assign empty = (cnt == '0);  // Same as "~| cnt"
-    assign full = (cnt == depth);
+        logic was_reset = 0;
 
-endmodule
-
-module fifo_monitor
-# (
-    parameter width = 1,
-              depth = 0,
-              allow_push_when_full_with_pop = 0
-)
-(
-    input               clk,
-    input               rst,
-    input               push,
-    input               pop,
-    input [width - 1:0] write_data,
-    input [width - 1:0] read_data,
-    input               empty,
-    input               full
-);
-
-    logic [width - 1:0] queue [$];
-    logic [width - 1:0] dummy;
-
-    logic was_reset = 0;
-
-    always @ (posedge clk)
-    begin
+        always @ (posedge clk)
+        begin
         if (rst)
         begin
-            queue = {};
-            was_reset = 1;
+        queue = {};
+        was_reset = 1;
         end
         else if (was_reset)
         begin
-            // Checking
-
-       assert (~ (push & full & ~ (pop & allow_push_when_full_with_pop)));
-       assert (~ (pop  & empty));
-
-            assert (~ ( queue.size () == 0     & ~ empty ));
-            assert (~ ( queue.size () == depth & ~ full  ));
-
-            // The following assertions
-            // will not work with some FIFO microarchitectures.
-           // An exam/interview question: what kind of microarchitectures?
-            //
-            // assert ( empty == ( queue.size () == 0     ));
-            // assert ( full  == ( queue.size () == depth ));
-
-            assert (~ (  ~ empty
-                       & queue.size () != 0
-                       & read_data != queue [0] ));
-
-            // Modeling
-
-            if (push)
-                queue.push_back (write_data);
-
-            if (pop & queue.size () > 0)
-            begin
-                `ifdef __ICARUS__
-           // Some version of Icarus has a bug, and this is a workaround
-                    queue.delete (0);
-                `else
-                    dummy = queue.pop_front ();
-                `endif
-            end
-
-            // Logging
-
-            if (push | pop)
-            begin
-                if (push)
-                    $write ("push %h", write_data);
-                else
-                    $write ("       ");
-
-                if (pop)
-                    $write ("  pop %h", read_data);
-                else
-                    $write ("        ");
-
-                $write ("  %5s %4s",
-                    empty ? "empty" : "     ",
-                    full  ? "full"  : "    ");
-
-                $write (" [");
-
-                for (int i = 0; i < queue.size (); i ++)
-                    $write (" %h", queue [queue.size () - i - 1]);
-
-                $display (" ]");
-            end
+        // Checking
+        assert (~ (push & full & ~ (pop & allow_push_when_full_with_pop)));
+        assert (~ (pop  & empty));
+        assert (~ ( queue.size () == 0     & ~ empty ));
+        assert (~ ( queue.size () == depth & ~ full  ));
+        // The following assertions
+        // will not work with some FIFO microarchitectures.
+        // An exam/interview question: what kind of microarchitectures?
+        // assert ( empty == ( queue.size () == 0     ));
+        // assert ( full  == ( queue.size () == depth ));
+        assert (~ (  ~ empty & queue.size () != 0 & read_data != queue [0] ));
+        // Modeling
+        if (push)
+        queue.push_back (write_data);
+        if (pop & queue.size () > 0)
+        begin
+       `ifdef __ICARUS__
+        // Some version of Icarus has a bug, and this is a workaround
+        queue.delete (0);
+       `else
+        dummy = queue.pop_front ();
+       `endif
         end
-    end
-
-endmodule
-
-
-
+        // Logging
+        if (push | pop)
+        begin
+        if (push)
+        $write ("push %h", write_data);
+        else
+        $write ("       ");
+        if (pop)
+        $write ("  pop %h", read_data);
+        else
+        $write ("        ");
+        $write ("  %5s %4s", empty ? "empty" : "     ",full  ? "full"  : "    ");
+        $write (" [");
+        for (int i = 0; i < queue.size (); i ++)
+        $write (" %h", queue [queue.size () - i - 1]);
+        $display (" ]");
+        end
+        end
+        end
+        endmodule
 
 module challenge(
         input                     clk,
@@ -196,8 +135,13 @@ module challenge(
         logic [FLEN - 0]   a_square;
         logic [FLEN - 0] a_square_Q;
         logic [FLEN - 0]a_i_Q;
-        logic           a_square_vld, a_square_vld_Q, arg_vld_Q, NO_mult, arg_rdy_Q, res_rdy_Q;
-        assign NO_mult = ~(res_rdy & arg_vld);
+        
+        logic           a_square_vld, a_square_vld_Q, arg_vld_Q;
+        wire           arg_rdy_NEG,NO_mult, arg_rdy_Q, res_rdy_Q;
+
+        assign NO_mult     = ~(res_rdy & arg_vld);
+        assign arg_rdy_NEG = ~arg_rdy; 
+        
         f_mult inst_i (
         .clk       (    clk         ),
         .rst       (    rst         ),
@@ -206,7 +150,7 @@ module challenge(
         .up_valid  (    arg_vld     ),
         .res       (    a_square    ),
         .down_valid(    a_square_vld),
-        .busy      (    ~arg_rdy    ),
+        .busy      (    arg_rdy_NEG ),
         .error     (    NO_mult     ));// have an error when ~(res_rdy & arg_vld)
         //stage i register
         always_ff @(posedge clk)
@@ -223,19 +167,20 @@ module challenge(
         logic [FLEN - 0]  a_cubed;
         logic [FLEN - 0]a_cubed_Q;
         logic [FLEN - 0]a_ii_Q;
-        logic           ii_up_valid, a_cubed_vld, a_cubed_vld_Q,a_ii_Q_vld,ii_rdy, ii_NO_mult;
-        logic              = ii_rdy_Q,ii_arg_rdy_Q, ii_res_rdy_Q;
+        
+        logic           ii_up_vld, a_cubed_vld, a_cubed_vld_Q,a_ii_Q_vld;
+        wire            ii_rdy_Q,ii_arg_rdy_Q, ii_res_rdy_Q, ii_rdy, ii_NO_mult;
        
         assign ii_rdy      = ~(arg_rdy_Q | res_rdy_Q);
-        assign ii_NO_mult  = ~(ii_up_valid & res_rdy_Q);
-        assign ii_up_valid = arg_vld_Q & a_square_vld_Q;
+        assign ii_NO_mult  = ~(ii_up_vld & res_rdy_Q);
+        assign ii_up_vld = arg_vld_Q & a_square_vld_Q;
        
         f_mult inst_ii (
         .clk       (    clk         ),
         .rst       (    rst         ),
         .a         (    a_square_Q  ),
         .b         (    a_i_Q       ),
-        .up_valid  (    ii_up_valid ),
+        .up_valid  (    ii_up_vld   ),
         .res       (    a_cubed     ),
         .down_valid(    a_cubed_vld ),
         .busy      (    ii_rdy      ),    //  ~(res_rdy | arg_rdy)
@@ -255,19 +200,20 @@ module challenge(
         logic [FLEN - 0]  a_fourth;
         logic [FLEN - 0]a_fourth_Q;
         logic [FLEN - 0]a_iii_Q;
-        logic           iii_up_valid, a_fourth_vld, a_fourth_vld_Q, a_iii_vld_Q;
-        logic           iii_rdy, iii_arg_rdy_Q, iii_res_rdy_Q;
+        
+        logic           iii_up_vld, a_fourth_vld, a_fourth_vld_Q, a_iii_vld_Q;
+        wire            iii_rdy, iii_arg_rdy_Q, iii_res_rdy_Q,iii_No_mult;
 
-        assign iii_rdy      = ~(ii_arg_rdy_Q | ii_res_rdy_Q )
-        assign iii_up_valid = a_cubed_vld_Q & a_ii_Q_vld;
-        assign iii_No_mult  = ~(iii_up_valid & iii_res_rdy_Q);
+        assign iii_rdy      = ~(ii_arg_rdy_Q | ii_res_rdy_Q );
+        assign iii_up_vld = a_cubed_vld_Q & a_ii_Q_vld;
+        assign iii_No_mult  = ~(iii_up_vld & iii_res_rdy_Q);
 
         f_mult inst_iii (
         .clk       (    clk          ),
         .rst       (    rst          ),
         .a         (    a_cubed_Q    ),
         .b         (    a_ii_Q       ),
-        .up_valid  (    iii_up_valid ),
+        .up_valid  (    iii_up_vld ),
         .res       (    a_fourth     ),
         .down_valid(    a_fourth_vld ),
         .busy      (    iii_rdy      ),    //~(arg_rdy | res_rdy)
@@ -287,7 +233,7 @@ module challenge(
 //----------------------------stage_iv-----------------------------------------------------
         logic [FLEN - 0]  a_fifth, a_fifth_Q;
         logic             a_fifth_vld, iv_up_valid, a_fifth_vld_Q; 
-        logic             iv_rdy, iv_res_rdy_Q, iv_arg_rdy_Q;
+        wire              iv_rdy, iv_res_rdy_Q, iv_arg_rdy_Q, iv_No_mult;
 
         assign iv_rdy      = ~(iii_res_rdy_Q | iii_arg_rdy_Q);
         assign iv_up_valid = a_iii_vld_Q & a_fourth_vld_Q;
@@ -312,15 +258,22 @@ module challenge(
 
 
         logic [FLEN - 0 ]b_shifted, b_shifted_Q;                  // b_values logic
-        logic            b_shifted_vld, b_shifted_vld_Q;
-        shift_register_with_valid #(.width(FLEN), .depth(3)) inst_b(
-        .clk        (  clk           ),
-        .rst        (  rst           ),
-        .in_vld     (  arg_vld       ),
-        .in_data    (  b             ), 
-        .out_vld    (  b_shifted_vld ),
-        .out_data   (  b_shifted     ));
-     
+        logic            b_shifted_vld, b_shifted_vld_Q, b_empty;
+        wire             b_push;
+
+        assign b_push = arg_vld & arg_rdy;
+
+flip_flop_fifo_with_counter # (.width (FLEN), .depth (3)) fifo_b    (
+        .clk         ( clk               ),
+        .rst         ( rst               ),
+        .push        ( b_push            ),
+        .pop         ( b_shifted_vld     ),
+        .write_data  ( b                 ),
+        .read_data   ( b_shifted         ),
+        .empty       ( b_empty           ),
+        .full        ( arg_rdy_NEG      ));
+         
+
         always_ff@(posedge clk)
         if(rst)
         b_shifted_Q <= '0;
@@ -330,6 +283,13 @@ module challenge(
 
         logic [FLEN - 0 ]b_mult, b_mult_Q;
         logic            b_mult_vld, b_mult_vld_Q;
+        
+        wire            iv_rdy03b, iv_NO_mult03b;
+        
+        assign          iv_rdy03b     = ~(iii_arg_rdy_Q | iii_res_rdy_Q );
+        assign          iv_NO_mult03b = ~(b_shifted_vld_Q & iv_res_rdy_Q ); 
+
+
         f_mult inst_b_mult (
         .clk       (    clk                 ),
         .rst       (    rst                 ),
@@ -338,8 +298,8 @@ module challenge(
         .up_valid  (    b_shifted_vld_Q     ),
         .res       (    b_mult              ),
         .down_valid(    b_mult_vld          ),
-        .busy      (    iv_rdy              ),
-        .error     (    iv_No_mult          ));
+        .busy      (    iv_rdy03b           ),
+        .error     (    iv_NO_mult03b       ));
      
         always_ff @(posedge clk)
         if(rst) b_mult_Q <= '0;
@@ -349,8 +309,8 @@ module challenge(
 
 //------adding 0.3b and  a^5-----------------stage v-------------------------------
         logic [FLEN - 0] ab_sum, ab_sum_Q;
-        logic            ab_sum_vld, v_up_vld, v_down_vld, v_down_vld_Q;
-        logic            v_rdy, v_arg_rdy_Q, v_res_rdy_Q;
+        logic            ab_sum_vld, v_down_vld, v_down_vld_Q;
+        wire             v_rdy, v_arg_rdy_Q,v_arg_rdy, v_res_rdy_Q, v_up_vld, v_No_add;
        
         assign    v_rdy = ~(iv_arg_rdy_Q | iv_res_rdy_Q);
         assign v_up_vld = b_mult_vld_Q & a_fifth_vld_Q;
@@ -376,14 +336,17 @@ module challenge(
         v_down_vld_Q <= v_down_vld; end 
 
         logic [FLEN - 0 ]c_shifted_Q, c_shifted;                  // c_values logic
-        logic            c_shifted_vld, c_shifted_vld_Q;
-        shift_register_with_valid  #(.width(FLEN), .depth(5)) inst_c(
-        .clk        (  clk            ),
-        .rst        (  rst            ),
-        .in_vld     (  arg_vld        ),
-        .in_data    (  c              ), 
-        .out_vld    (  c_shifted_vld  ),
-        .out_data   (  c_shifted      ));
+        logic            c_shifted_vld, c_shifted_vld_Q,c_empty,c_push;
+
+flip_flop_fifo_with_counter # (.width (FLEN), .depth (5)) fifo_c    (
+        .clk         ( clk               ),
+        .rst         ( rst               ),
+        .push        ( c_push            ),
+        .pop         ( c_shifted_vld     ),
+        .write_data  ( c                 ),
+        .read_data   ( c_shifted         ),
+        .empty       ( c_empty           ),
+        .full        ( arg_rdy_NEG       ));
         
         always_ff @(posedge clk)
         if(rst) c_shifted_Q <= '0;
@@ -396,10 +359,10 @@ module challenge(
 
         always_ff @(posedge clk)
         if(rst) vi_res_rdy_Q <= '0;
-        else vi_res_rdy_Q    <= v_res_rdy_Q;end
+        else vi_res_rdy_Q    <= v_res_rdy_Q;
  
-        assign  vi_rdy   =  ~(v_res_rdy_Q | v_arg_rdy_Q);
-        assign vi_up_vld =  c_shifted_vld_Q & v_down_vld_Q;
+        assign vi_rdy    = ~(v_res_rdy_Q | v_arg_rdy_Q);
+        assign vi_up_vld = c_shifted_vld_Q & v_down_vld_Q;
         assign vi_No_add = ~(vi_up_vld & vi_res_rdy_Q); 
         f_sub inst_ab_and_c (
         .clk          (  clk            ),
@@ -410,7 +373,7 @@ module challenge(
         .res          (  res            ),
         .down_valid   (  res_vld        ),
         .busy         (  vi_rdy         ),
-        .error        (                 ));
+        .error        (  vi_No_add      ));
         
        /*
         The Prompt:

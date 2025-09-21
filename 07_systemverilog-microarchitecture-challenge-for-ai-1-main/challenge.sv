@@ -60,12 +60,16 @@ module challenge(
         .error     (                ));
         //stage i register
         always_ff @(posedge clk)
-        if (rst) a_square_Q <= '0;
+        if (rst) begin 
+        a_square_Q      <= '0;
+        arg_vld_Q       <= '0;
+        a_i_Q           <= '0;
+        a_square_vld_Q  <= '0; end
         else begin
         arg_vld_Q       <= arg_vld;
         a_square_vld_Q  <= a_square_vld;
         a_square_Q      <= a_square;
-        a_i_Q           <= a; end
+        a_i_Q           <= a;  end
 
 //----------------------------stage ii-------------------------------------------------------
         logic [FLEN - 0]  a_cubed;
@@ -86,7 +90,11 @@ module challenge(
         .error     (                ));
         //stage ii register
         always_ff @(posedge clk)
-        if (rst) a_cubed_Q <= '0;
+        if (rst) begin
+        a_cubed_Q    <= '0;
+        a_cubed_vld_Q<= '0;
+        a_ii_Q       <= '0;
+        a_ii_Q_vld   <= '0;    end
         else  begin 
         a_ii_Q_vld   <= arg_vld_Q;
         a_cubed_vld_Q<= a_cubed_vld;
@@ -112,7 +120,11 @@ module challenge(
         .error     (                 ));
         //stage iii register
         always_ff @(posedge clk)
-        if (rst) a_fourth_Q <= '0;
+        if (rst) begin
+        a_fourth_Q    <= '0;
+        a_fourth_vld_Q<= '0;
+        a_iii_Q       <= '0;
+        a_iii_vld_Q   <= '0;     end
         else begin
         a_fourth_vld_Q<= a_fourth_vld;
         a_fourth_Q    <= a_fourth;
@@ -137,8 +149,9 @@ module challenge(
         .busy      (                 ),
         .error     (                 ));
         always_ff @(posedge clk)
-        if (rst) 
-        a_fifth_Q <= '0;
+        if (rst) begin
+        a_fifth_Q            <= '0;
+        a_fifth_vld_Q        <= '0;          end
         else begin a_fifth_Q <= a_fifth;
         a_fifth_vld_Q        <= a_fifth_vld; end
 
@@ -154,8 +167,9 @@ module challenge(
         .out_data   (  b_shifted     ));
      
         always_ff@(posedge clk)
-        if(rst)
-        b_shifted_Q <= '0;
+        if(rst)  begin 
+        b_shifted_Q     <= '0;
+        b_shifted_vld_Q <= '0;            end
         else begin 
         b_shifted_Q     <= b_shifted;
         b_shifted_vld_Q <= b_shifted_vld; end
@@ -174,7 +188,9 @@ module challenge(
         .error     (                        ));
      
         always_ff @(posedge clk)
-        if(rst) b_mult_Q <= '0;
+        if(rst)  begin
+        b_mult_Q    <= '0;
+        b_mult_vld_Q<= '0;         end
         else  begin
         b_mult_Q    <= b_mult;
         b_mult_vld_Q<= b_mult_vld; end
@@ -198,8 +214,11 @@ module challenge(
         .error        (                ));
         
         always_ff @ (posedge clk)
-        if (rst) ab_sum_Q <= '0;
-        else   begin   ab_sum_Q <= ab_sum;
+        if (rst)  begin 
+        ab_sum_Q     <= '0;
+        v_down_vld_Q <= '0;         end
+        else   begin   
+        ab_sum_Q     <= ab_sum;
         v_down_vld_Q <= v_down_vld; end 
 
         logic [FLEN - 0 ]c_shifted_Q, c_shifted;                  // c_values logic
@@ -213,13 +232,17 @@ module challenge(
         .out_data   (  c_shifted      ));
         
         always_ff @(posedge clk)
-        if(rst) c_shifted_Q <= '0;
-        else  begin   c_shifted_Q <= c_shifted;
+        if(rst)  begin
+        c_shifted_Q     <= '0;
+        c_shifted_vld_Q <= '0;            end
+        else  begin  
+        c_shifted_Q     <= c_shifted;
         c_shifted_vld_Q <= c_shifted_vld; end
 
 
 //------adding sum of 0.3b & a^5  with c value-------stage vi----------------
         logic  vi_up_vld;
+
         assign vi_up_vld =  c_shifted_vld_Q & v_down_vld_Q;
 
         f_add inst_ab_and_c (
