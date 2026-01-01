@@ -27,6 +27,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module shiftcorrection (
   input logic  [  NORMSHIFTSZ-1:0] Shifted,                // normalization shifter output
   // divsqrt

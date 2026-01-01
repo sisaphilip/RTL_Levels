@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+`include "config.vh"
+
 module unpackinput (
   input  logic [  FLEN-1:0]        A,          // inputs from register file
   input  logic                     En,         // enable the input

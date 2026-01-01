@@ -8,7 +8,9 @@
         modules from the arithmetic_block_wrappers directory.
 
         */
+
 //Shift register with valid borrowed from 04_09
+        //`define FLEN 64
 module shift_register_with_valid #(       
         parameter width = 8, depth = 8)(
         input                      clk, rst, in_vld,
@@ -21,7 +23,7 @@ module shift_register_with_valid #(
         
         always_ff @ (posedge clk)
         if (rst) valid  <= '0;
-        else valid      <= {valid[depth-2:0], in_vld};
+        else valid      <= {valid[depth-2:0],in_vld};
         
         always_ff @ (posedge clk)
         begin data [0]  <= in_data;
@@ -33,8 +35,8 @@ module shift_register_with_valid #(
         assign out_data  = data  [depth - 1];
         endmodule
 
-
-module challenge(
+        //`define FLEN 64
+module challenge #(FLEN = 64)(
         input                     clk, rst, arg_vld,
         input        [FLEN - 1:0] a,
         input        [FLEN - 1:0] b,
@@ -46,7 +48,10 @@ module challenge(
 //----------------------------stage_i------------------------------------------------------
         logic [FLEN - 0]   a_square;
         logic [FLEN - 0] a_square_Q;
-        logic [FLEN - 0]a_i_Q;
+        logic [FLEN - 0]      a_i_Q;
+
+        //localparam FLEN = 32'd64;
+
         logic           a_square_vld, a_square_vld_Q, arg_vld_Q;
         f_mult inst_i (
         .clk       (    clk         ),
@@ -74,7 +79,8 @@ module challenge(
 //----------------------------stage ii-------------------------------------------------------
         logic [FLEN - 0]  a_cubed;
         logic [FLEN - 0]a_cubed_Q;
-        logic [FLEN - 0]a_ii_Q;
+        logic [FLEN - 0]   a_ii_Q;
+
         logic           ii_up_valid, a_cubed_vld, a_cubed_vld_Q,a_ii_Q_vld;
 
         assign ii_up_valid = arg_vld_Q & a_square_vld_Q;
@@ -104,7 +110,8 @@ module challenge(
 //----------------------------stage_iii----------------------------------------------------
         logic [FLEN - 0]  a_fourth;
         logic [FLEN - 0]a_fourth_Q;
-        logic [FLEN - 0]a_iii_Q;
+        logic [FLEN - 0]   a_iii_Q;
+
         logic           iii_up_valid, a_fourth_vld, a_fourth_vld_Q, a_iii_vld_Q;
 
         assign iii_up_valid = a_cubed_vld_Q & a_ii_Q_vld;
@@ -134,6 +141,7 @@ module challenge(
         
 //----------------------------stage_iv-----------------------------------------------------
         logic [FLEN - 0]  a_fifth, a_fifth_Q;
+
         logic             a_fifth_vld, iv_up_valid, a_fifth_vld_Q; 
 
         assign iv_up_valid = a_iii_vld_Q & a_fourth_vld_Q;
@@ -144,7 +152,7 @@ module challenge(
         .a         (    a_fourth_Q   ),
         .b         (    a_iii_Q      ),
         .up_valid  (    iv_up_valid  ),
-        .res       (    a_fifth      ) ,
+        .res       (    a_fifth      ),
         .down_valid(    a_fifth_vld  ),
         .busy      (                 ),
         .error     (                 ));
@@ -166,7 +174,7 @@ module challenge(
         .out_vld    (  b_shifted_vld ),
         .out_data   (  b_shifted     ));
      
-        always_ff@(posedge clk)
+        always_ff@(posedge clk)                                 //stage iv register
         if(rst)  begin 
         b_shifted_Q     <= '0;
         b_shifted_vld_Q <= '0;            end
@@ -176,10 +184,10 @@ module challenge(
 
         logic [FLEN - 0 ]b_mult, b_mult_Q;
         logic            b_mult_vld, b_mult_vld_Q;
-        f_mult inst_b_mult (
+        f_mult inst_b_mult (                                    //stage v
         .clk       (    clk                 ),
         .rst       (    rst                 ),
-        .a         (    b_shifted_Q         ),
+        .a         (    b_shifted_Q         ),        //TODO test    
         .b         (    0.3                 ),
         .up_valid  (    b_shifted_vld_Q     ),
         .res       (    b_mult              ),
@@ -249,7 +257,7 @@ module challenge(
         .clk          (  clk            ),
         .rst          (  rst            ),
         .a            (  ab_sum_Q       ),
-        .b            (  c_shifted_Q    ),
+        .b            (  c_shifted_Q    ),      //TODO 
         .up_valid     (  vi_up_vld      ),
         .res          (  res            ),
         .down_valid   (  res_vld        ),

@@ -27,6 +27,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module postprocess (
   // general signals
   input logic                              Xs, Ys,              // input signs

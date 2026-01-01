@@ -27,6 +27,8 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+`include "config.vh"
+
 module fclassify (
   input  logic                Xs,         // sign bit
   input  logic                XNaN,       // is NaN

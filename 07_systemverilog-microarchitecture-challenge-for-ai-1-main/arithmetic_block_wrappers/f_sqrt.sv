@@ -1,3 +1,8 @@
+
+
+
+`include "config.vh"
+
 module f_sqrt (
     input               clk,
     input               rst,

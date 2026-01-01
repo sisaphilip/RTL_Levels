@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
+
 module fctrl (
   input  logic                 clk,
   input  logic                 reset,

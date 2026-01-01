@@ -1,3 +1,7 @@
+
+
+`include "config.vh"
+
 module f_div (
     input               clk,
     input               rst,

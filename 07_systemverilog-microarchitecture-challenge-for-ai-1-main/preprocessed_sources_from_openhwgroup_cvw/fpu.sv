@@ -27,6 +27,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module fpu (
   input  logic                 clk,
   input  logic                 reset,

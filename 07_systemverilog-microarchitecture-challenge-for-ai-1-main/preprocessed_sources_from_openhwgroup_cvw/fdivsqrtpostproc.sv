@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
+
 module fdivsqrtpostproc (
   input  logic                 clk, reset,
   input  logic                 StallM,

@@ -1,3 +1,8 @@
+
+
+`include "config.vh"
+
+
 module f_sub (
     input               clk,
     input               rst,

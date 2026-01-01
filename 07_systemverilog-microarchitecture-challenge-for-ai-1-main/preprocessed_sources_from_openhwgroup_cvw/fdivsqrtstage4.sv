@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
+
 module fdivsqrtstage4 (
   input  logic [  DIVb+3:0] D, DBar, D2, DBar2, // Q4.DIVb
   input  logic [  DIVb:0]   U,UM,               // U1.DIVb

@@ -28,6 +28,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
+
 module packoutput (
   input  logic [  FLEN-1:0]       Unpacked,
   input  logic [  FMTBITS-1:0]    Fmt,

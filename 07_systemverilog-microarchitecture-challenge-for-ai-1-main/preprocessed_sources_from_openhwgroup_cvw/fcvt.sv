@@ -26,6 +26,8 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+`include "config.vh"
+
 module fcvt (
   input  logic                    Xs,           // input's sign
   input  logic [  NE-1:0]         Xe,           // input's exponent

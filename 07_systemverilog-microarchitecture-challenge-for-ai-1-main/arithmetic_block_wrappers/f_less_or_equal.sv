@@ -1,3 +1,7 @@
+
+
+`include "config.vh"
+
 module f_less_or_equal
 (
     input [FLEN - 1:0] a, b,

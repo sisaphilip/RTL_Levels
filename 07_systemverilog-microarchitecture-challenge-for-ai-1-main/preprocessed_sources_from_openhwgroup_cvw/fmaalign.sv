@@ -27,6 +27,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module fmaalign (
   input  logic [  NE-1:0]      Xe, Ye, Ze,          // biased exponents in B(NE.0) format
   input  logic [  NF:0]        Zm,                  // significand in U(0.NF) format]

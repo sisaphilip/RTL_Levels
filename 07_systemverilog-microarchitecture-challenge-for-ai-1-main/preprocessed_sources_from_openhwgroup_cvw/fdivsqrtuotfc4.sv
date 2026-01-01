@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+`include "config.vh"
+
 module fdivsqrtuotfc4 (
   input  logic [3:0]     udigit,
   input  logic [  DIVb:0] U, UM,          // U1.DIVb  UM is actually U - 1 ulp and starts negative, but this representation still produces the right answer

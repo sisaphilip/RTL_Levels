@@ -1,0 +1,806 @@
+/home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtstage4.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtstage4.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtstage4_sv_unit
+-- Compiling module fdivsqrtstage4
+
+Top level modules:
+	fdivsqrtstage4
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/or_rows.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/or_rows.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module or_rows
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/or_rows.sv(31): (vlog-13314) Defaulting port 'a' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	or_rows
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fregfile.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fregfile.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fregfile
+
+Top level modules:
+	fregfile
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_sub.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_sub.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package f_sub_sv_unit
+-- Compiling module f_sub
+
+Top level modules:
+	f_sub
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/prioritythermometer.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/prioritythermometer.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module prioritythermometer
+
+Top level modules:
+	prioritythermometer
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_div.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_div.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package f_div_sv_unit
+-- Compiling module f_div
+
+Top level modules:
+	f_div
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fhazard.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fhazard.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fhazard
+
+Top level modules:
+	fhazard
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/arrs.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/arrs.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module arrs
+
+Top level modules:
+	arrs
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package round_sv_unit
+-- Compiling module round
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(208): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(209): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(210): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(213): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(214): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(215): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(218): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(219): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(220): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(223): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(224): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/round.sv(225): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	round
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtfsm.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtfsm.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtfsm_sv_unit
+-- Compiling module fdivsqrtfsm
+
+Top level modules:
+	fdivsqrtfsm
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/binencoder.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/binencoder.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module binencoder
+
+Top level modules:
+	binencoder
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/lzc.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/lzc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module lzc
+
+Top level modules:
+	lzc
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flopenrc.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flopenrc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module flopenrc
+
+Top level modules:
+	flopenrc
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpack.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpack.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package unpack_sv_unit
+-- Compiling module unpack
+
+Top level modules:
+	unpack
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/neg.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/neg.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module neg
+
+Top level modules:
+	neg
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fpu.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fpu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fpu_sv_unit
+-- Compiling module fpu
+
+Top level modules:
+	fpu
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtuslc2.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtuslc2.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fdivsqrtuslc2
+
+Top level modules:
+	fdivsqrtuslc2
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flopen.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flopen.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module flopen
+
+Top level modules:
+	flopen
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/postprocess.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/postprocess.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package postprocess_sv_unit
+-- Compiling module postprocess
+
+Top level modules:
+	postprocess
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmasign.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmasign.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fmasign
+
+Top level modules:
+	fmasign
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmamult.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmamult.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fmamult_sv_unit
+-- Compiling module fmamult
+
+Top level modules:
+	fmamult
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/priorityonehot.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/priorityonehot.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module priorityonehot
+
+Top level modules:
+	priorityonehot
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/resultsign.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/resultsign.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module resultsign
+
+Top level modules:
+	resultsign
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_less_or_equal.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_less_or_equal.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package f_less_or_equal_sv_unit
+-- Compiling module f_less_or_equal
+
+Top level modules:
+	f_less_or_equal
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtstage2.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtstage2.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtstage2_sv_unit
+-- Compiling module fdivsqrtstage2
+
+Top level modules:
+	fdivsqrtstage2
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package unpackinput_sv_unit
+-- Compiling module unpackinput
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(140): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(141): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(142): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(143): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(148): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(150): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(152): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(156): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(159): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(160): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(161): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(162): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(168): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(169): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(170): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(171): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(177): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(178): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(179): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(180): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(194): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(195): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(196): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(197): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(203): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(204): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(205): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/unpackinput.sv(206): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	unpackinput
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/normshift.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/normshift.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package normshift_sv_unit
+-- Compiling module normshift
+
+Top level modules:
+	normshift
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmaexpadd.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmaexpadd.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fmaexpadd_sv_unit
+-- Compiling module fmaexpadd
+
+Top level modules:
+	fmaexpadd
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/divshiftcalc.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/divshiftcalc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package divshiftcalc_sv_unit
+-- Compiling module divshiftcalc
+
+Top level modules:
+	divshiftcalc
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fclassify.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fclassify.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fclassify_sv_unit
+-- Compiling module fclassify
+
+Top level modules:
+	fclassify
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package f_mult_sv_unit
+-- Compiling module f_mult
+
+Top level modules:
+	f_mult
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmaadd.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmaadd.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fmaadd_sv_unit
+-- Compiling module fmaadd
+
+Top level modules:
+	fmaadd
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtiter.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtiter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtiter_sv_unit
+-- Compiling module fdivsqrtiter
+
+Top level modules:
+	fdivsqrtiter
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/counter.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/counter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flop.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flop.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module flop
+
+Top level modules:
+	flop
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/mux.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/mux.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux2
+-- Compiling module mux3
+-- Compiling module mux4
+-- Compiling module mux5
+-- Compiling module mux6
+-- Compiling module mux7
+
+Top level modules:
+	mux2
+	mux3
+	mux4
+	mux5
+	mux6
+	mux7
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/challenge.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/challenge.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shift_register_with_valid
+-- Compiling module challenge
+
+Top level modules:
+	challenge
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fli_sv_unit
+-- Compiling module fli
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(50): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(51): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(52): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(53): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(54): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(55): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(56): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(57): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(58): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(59): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(60): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(61): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(62): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(63): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(64): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(65): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(66): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(67): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(68): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(69): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(70): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(71): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(72): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(73): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(74): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(75): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(76): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(77): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(78): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(79): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(80): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(81): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(138): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(139): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(140): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(141): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(142): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(143): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(144): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(145): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(146): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(147): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(148): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(149): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(150): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(151): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(152): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(153): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(154): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(155): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(156): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(157): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(158): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(159): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(160): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(161): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(162): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(163): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(164): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(165): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(166): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(167): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(168): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fli.sv(169): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	fli
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_sqrt.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_sqrt.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package f_sqrt_sv_unit
+-- Compiling module f_sqrt
+
+Top level modules:
+	f_sqrt
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fround.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fround.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fround_sv_unit
+-- Compiling module fround
+
+Top level modules:
+	fround
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmaalign.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmaalign.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fmaalign_sv_unit
+-- Compiling module fmaalign
+
+Top level modules:
+	fmaalign
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/adder.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/adder.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtuotfc4.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtuotfc4.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtuotfc4_sv_unit
+-- Compiling module fdivsqrtuotfc4
+
+Top level modules:
+	fdivsqrtuotfc4
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/roundsign.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/roundsign.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module roundsign
+
+Top level modules:
+	roundsign
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/negateintres.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/negateintres.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package negateintres_sv_unit
+-- Compiling module negateintres
+
+Top level modules:
+	negateintres
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmalza.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmalza.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fmalza
+
+Top level modules:
+	fmalza
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrt.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrt.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrt_sv_unit
+-- Compiling module fdivsqrt
+
+Top level modules:
+	fdivsqrt
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtexpcalc.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtexpcalc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtexpcalc_sv_unit
+-- Compiling module fdivsqrtexpcalc
+
+Top level modules:
+	fdivsqrtexpcalc
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package f_add_sv_unit
+-- Compiling module f_add
+
+Top level modules:
+	f_add
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flags.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flags.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package flags_sv_unit
+-- Compiling module flags
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flags.sv(110): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flags.sv(111): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flags.sv(112): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flags.sv(113): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	flags
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmashiftcalc.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmashiftcalc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fmashiftcalc_sv_unit
+-- Compiling module fmashiftcalc
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmashiftcalc.sv(66): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmashiftcalc.sv(67): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmashiftcalc.sv(68): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmashiftcalc.sv(69): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmashiftcalc.sv(108): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmashiftcalc.sv(109): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmashiftcalc.sv(110): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmashiftcalc.sv(111): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	fmashiftcalc
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtpreproc.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtpreproc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtpreproc_sv_unit
+-- Compiling module fdivsqrtpreproc
+
+Top level modules:
+	fdivsqrtpreproc
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtcycles.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtcycles.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtcycles_sv_unit
+-- Compiling module fdivsqrtcycles
+
+Top level modules:
+	fdivsqrtcycles
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcmp.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcmp.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fcmp_sv_unit
+-- Compiling module fcmp
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcmp.sv(103): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcmp.sv(104): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcmp.sv(106): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcmp.sv(107): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcmp.sv(109): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcmp.sv(110): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcmp.sv(111): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	fcmp
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/synchronizer.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/synchronizer.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module synchronizer
+
+Top level modules:
+	synchronizer
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtfgen4.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtfgen4.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtfgen4_sv_unit
+-- Compiling module fdivsqrtfgen4
+
+Top level modules:
+	fdivsqrtfgen4
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flopenl.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flopenl.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module flopenl
+
+Top level modules:
+	flopenl
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/wally_fpu.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/wally_fpu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package wally_fpu_sv_unit
+-- Compiling module wally_fpu
+
+Top level modules:
+	wally_fpu
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmtparams.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmtparams.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fmtparams_sv_unit
+-- Compiling module fmtparams
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmtparams.sv(47): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmtparams.sv(48): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmtparams.sv(49): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmtparams.sv(50): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmtparams.sv(74): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmtparams.sv(75): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmtparams.sv(76): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fmtparams.sv(77): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	fmtparams
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtpostproc.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtpostproc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtpostproc_sv_unit
+-- Compiling module fdivsqrtpostproc
+
+Top level modules:
+	fdivsqrtpostproc
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/aplusbeq0.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/aplusbeq0.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module aplusbeq0
+
+Top level modules:
+	aplusbeq0
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package specialcase_sv_unit
+-- Compiling module specialcase
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(130): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(131): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(132): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(133): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(135): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(138): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(139): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(140): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(144): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(145): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(146): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(147): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(149): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(151): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(152): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(153): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(157): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(158): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(159): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(160): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(162): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(165): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(166): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(167): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(171): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(172): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(173): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(174): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(176): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(178): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(179): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(180): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(267): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(268): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(269): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(270): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(329): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(330): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(332): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(333): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(335): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(336): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(345): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(346): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(347): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(348): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(349): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/specialcase.sv(350): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	specialcase
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtuotfc2.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtuotfc2.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtuotfc2_sv_unit
+-- Compiling module fdivsqrtuotfc2
+
+Top level modules:
+	fdivsqrtuotfc2
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package packoutput_sv_unit
+-- Compiling module packoutput
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv(68): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv(70): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv(72): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv(73): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv(74): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv(77): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv(78): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv(79): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/packoutput.sv(81): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	packoutput
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flopr.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flopr.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module flopr
+
+Top level modules:
+	flopr
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcvt.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcvt.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fcvt_sv_unit
+-- Compiling module fcvt
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcvt.sv(126): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcvt.sv(127): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcvt.sv(128): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fcvt.sv(129): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	fcvt
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fctrl.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fctrl.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fctrl_sv_unit
+-- Compiling module fctrl
+
+Top level modules:
+	fctrl
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fma.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fma.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fma_sv_unit
+-- Compiling module fma
+
+Top level modules:
+	fma
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtfgen2.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtfgen2.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fdivsqrtfgen2_sv_unit
+-- Compiling module fdivsqrtfgen2
+
+Top level modules:
+	fdivsqrtfgen2
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtuslc4cmp.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtuslc4cmp.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fdivsqrtuslc4cmp
+
+Top level modules:
+	fdivsqrtuslc4cmp
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/decoder.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/decoder.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module decoder
+
+Top level modules:
+	decoder
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/cvtshiftcalc.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/cvtshiftcalc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package cvtshiftcalc_sv_unit
+-- Compiling module cvtshiftcalc
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/cvtshiftcalc.sv(83): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/cvtshiftcalc.sv(84): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/cvtshiftcalc.sv(85): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/cvtshiftcalc.sv(86): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	cvtshiftcalc
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/shiftcorrection.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/shiftcorrection.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package shiftcorrection_sv_unit
+-- Compiling module shiftcorrection
+
+Top level modules:
+	shiftcorrection
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fsgninj.sv {2 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fsgninj.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package fsgninj_sv_unit
+-- Compiling module fsgninj
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fsgninj.sv(63): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fsgninj.sv(64): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fsgninj.sv(65): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fsgninj.sv(66): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	fsgninj
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/onehotdecoder.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/onehotdecoder.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module onehotdecoder
+
+Top level modules:
+	onehotdecoder
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flopenr.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/flopenr.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module flopenr
+
+Top level modules:
+	flopenr
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtuslc4.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/fdivsqrtuslc4.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fdivsqrtuslc4
+
+Top level modules:
+	fdivsqrtuslc4
+
+} {} {}} /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/csa.sv {1 {vlog -work work -sv -stats=none /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/preprocessed_sources_from_openhwgroup_cvw/csa.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module csa
+
+Top level modules:
+	csa
+
+} {} {}}

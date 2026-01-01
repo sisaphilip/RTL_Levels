@@ -27,6 +27,8 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+`include "config.vh"
+
 module divshiftcalc (
   input  logic [  NE+1:0]              DivUe,              // divsqrt exponent
   output logic [  LOGNORMSHIFTSZ-1:0]  DivShiftAmt,        // divsqrt shift amount

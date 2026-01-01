@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
+
 module fdivsqrtfgen2 (
   input  logic              up, uz,
   input  logic [  DIVb+3:0] C, U, UM,   // Q4.DIVb (extended from shorter forms)

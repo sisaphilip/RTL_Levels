@@ -27,6 +27,8 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+`include "config.vh"
+
 module fli (
   input  logic [4:0]        Rs1,           // Index of immediate to select
   input  logic [1:0]        Fmt,           // 00 = single, 01 = double, 10 = half, 11 = quad

@@ -27,6 +27,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module fmashiftcalc (
   input  logic [  FMTBITS-1:0]          Fmt,                 // precision 1 = double 0 = single
   input  logic [  NE+1:0]               FmaSe,               // sum's exponent

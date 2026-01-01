@@ -27,6 +27,8 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+`include "config.vh"
+
 module negateintres (
   input  logic                     Signed,         // is the integer input signed
   input  logic                     Int64,          // is the integer input 64-bits

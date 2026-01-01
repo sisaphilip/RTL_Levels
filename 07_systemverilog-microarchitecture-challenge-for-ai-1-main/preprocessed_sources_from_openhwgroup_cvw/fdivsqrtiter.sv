@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
+
 module fdivsqrtiter (
   input  logic              clk,
   input  logic              IFDivStartE,
@@ -113,8 +117,8 @@ module fdivsqrtiter (
   // Send values from start of cycle for postprocessing
   assign FirstWS = WS[0];
   assign FirstWC = WC[0];
-  assign FirstU  = U[0];
+  assign FirstU  = U [0];
   assign FirstUM = UM[0];
-  assign FirstC  = C[0];
+  assign FirstC  = C [0];
 endmodule
 

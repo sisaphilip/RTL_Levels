@@ -27,6 +27,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module fsgninj (
   input  logic                 Xs, Ys, // X and Y sign bits
   input  logic [  FLEN-1:0]    X,      // X

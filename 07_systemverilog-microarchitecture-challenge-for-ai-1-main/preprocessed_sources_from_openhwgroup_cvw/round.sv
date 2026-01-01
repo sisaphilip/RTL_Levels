@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+`include "config.vh"
+
 module round (
   input  logic [  FMTBITS-1:0]     OutFmt,             // output format
   input  logic [2:0]               Frm,                // rounding mode

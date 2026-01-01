@@ -1,0 +1,670 @@
+# Loading project simulation_
+vsim work.challenge
+# vsim work.challenge 
+# Start time: 11:30:18 on Dec 14,2025
+# Loading sv_std.std
+# Loading work.challenge
+# Loading work.f_mult_sv_unit
+# Loading work.f_mult
+# Loading work.wally_fpu_sv_unit
+# Loading work.wally_fpu
+# Loading work.fctrl_sv_unit
+# Loading work.fctrl
+# Loading work.flopenrc
+# Loading work.flopenr
+# Loading work.fhazard
+# Loading work.mux3
+# Loading work.mux2
+# Loading work.unpack_sv_unit
+# Loading work.unpack
+# Loading work.unpackinput_sv_unit
+# Loading work.unpackinput
+# Loading work.fmtparams_sv_unit
+# Loading work.fmtparams
+# Loading work.fma_sv_unit
+# Loading work.fma
+# Loading work.fmaexpadd_sv_unit
+# Loading work.fmaexpadd
+# Loading work.fmamult_sv_unit
+# Loading work.fmamult
+# Loading work.fmasign
+# Loading work.fmaalign_sv_unit
+# Loading work.fmaalign
+# Loading work.fmaadd_sv_unit
+# Loading work.fmaadd
+# Loading work.fmalza
+# Loading work.lzc
+# Loading work.fdivsqrt_sv_unit
+# Loading work.fdivsqrt
+# Loading work.fdivsqrtpreproc_sv_unit
+# Loading work.fdivsqrtpreproc
+# Loading work.flopen
+# Loading work.fdivsqrtexpcalc_sv_unit
+# Loading work.fdivsqrtexpcalc
+# Loading work.fdivsqrtcycles_sv_unit
+# Loading work.fdivsqrtcycles
+# Loading work.fdivsqrtfsm_sv_unit
+# Loading work.fdivsqrtfsm
+# Loading work.fdivsqrtiter_sv_unit
+# Loading work.fdivsqrtiter
+# Loading work.fdivsqrtpostproc_sv_unit
+# Loading work.fdivsqrtpostproc
+# Loading work.aplusbeq0
+# Loading work.fcmp_sv_unit
+# Loading work.fcmp
+# Loading work.fsgninj_sv_unit
+# Loading work.fsgninj
+# Loading work.fclassify_sv_unit
+# Loading work.fclassify
+# Loading work.fcvt_sv_unit
+# Loading work.fcvt
+# Loading work.mux4
+# Loading work.postprocess_sv_unit
+# Loading work.postprocess
+# Loading work.cvtshiftcalc_sv_unit
+# Loading work.cvtshiftcalc
+# Loading work.fmashiftcalc_sv_unit
+# Loading work.fmashiftcalc
+# Loading work.divshiftcalc_sv_unit
+# Loading work.divshiftcalc
+# Loading work.normshift_sv_unit
+# Loading work.normshift
+# Loading work.shiftcorrection_sv_unit
+# Loading work.shiftcorrection
+# Loading work.roundsign
+# Loading work.round_sv_unit
+# Loading work.round
+# Loading work.resultsign
+# Loading work.flags_sv_unit
+# Loading work.flags
+# Loading work.negateintres_sv_unit
+# Loading work.negateintres
+# Loading work.specialcase_sv_unit
+# Loading work.specialcase
+# Loading work.shift_register_with_valid
+# Loading work.f_add_sv_unit
+# Loading work.f_add
+# Loading work.fdivsqrtstage4_sv_unit
+# Loading work.fdivsqrtstage4
+# Loading work.fdivsqrtuslc4cmp
+# Loading work.fdivsqrtfgen4_sv_unit
+# Loading work.fdivsqrtfgen4
+# Loading work.csa
+# Loading work.fdivsqrtuotfc4_sv_unit
+# Loading work.fdivsqrtuotfc4
+# Loading work.fround_sv_unit
+# Loading work.fround
+# Loading work.packoutput_sv_unit
+# Loading work.packoutput
+# Loading work.fli_sv_unit
+# Loading work.fli
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_i/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv Line: 40
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_ii/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv Line: 40
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_iii/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv Line: 40
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_iv/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv Line: 40
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_b_mult/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv Line: 40
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_ab/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'SetFflagsM'. The port definition is at: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/wally_fpu.sv(46).
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_ab/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv Line: 44
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_ab_and_c/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'SetFflagsM'. The port definition is at: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/wally_fpu.sv(46).
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_ab_and_c/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv Line: 44
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: Design size of 17043 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+add wave -position insertpoint  \
+sim:/challenge/FLEN \
+sim:/challenge/clk \
+sim:/challenge/rst \
+sim:/challenge/arg_vld \
+sim:/challenge/a \
+sim:/challenge/b \
+sim:/challenge/c \
+sim:/challenge/res_vld \
+sim:/challenge/res \
+sim:/challenge/a_square \
+sim:/challenge/a_square_Q \
+sim:/challenge/a_i_Q \
+sim:/challenge/a_square_vld \
+sim:/challenge/a_square_vld_Q \
+sim:/challenge/arg_vld_Q \
+sim:/challenge/a_cubed \
+sim:/challenge/a_cubed_Q \
+sim:/challenge/a_ii_Q \
+sim:/challenge/ii_up_valid \
+sim:/challenge/a_cubed_vld \
+sim:/challenge/a_cubed_vld_Q \
+sim:/challenge/a_ii_Q_vld \
+sim:/challenge/a_fourth \
+sim:/challenge/a_fourth_Q \
+sim:/challenge/a_iii_Q \
+sim:/challenge/iii_up_valid \
+sim:/challenge/a_fourth_vld \
+sim:/challenge/a_fourth_vld_Q \
+sim:/challenge/a_iii_vld_Q \
+sim:/challenge/a_fifth \
+sim:/challenge/a_fifth_Q \
+sim:/challenge/a_fifth_vld \
+sim:/challenge/iv_up_valid \
+sim:/challenge/a_fifth_vld_Q \
+sim:/challenge/b_shifted \
+sim:/challenge/b_shifted_Q \
+sim:/challenge/b_shifted_vld \
+sim:/challenge/b_shifted_vld_Q \
+sim:/challenge/b_mult \
+sim:/challenge/b_mult_Q \
+sim:/challenge/b_mult_vld \
+sim:/challenge/b_mult_vld_Q \
+sim:/challenge/ab_sum \
+sim:/challenge/ab_sum_Q \
+sim:/challenge/ab_sum_vld \
+sim:/challenge/v_up_valid \
+sim:/challenge/v_down_vld \
+sim:/challenge/v_down_vld_Q \
+sim:/challenge/v_up_vld \
+sim:/challenge/c_shifted_Q \
+sim:/challenge/c_shifted \
+sim:/challenge/c_shifted_vld \
+sim:/challenge/c_shifted_vld_Q \
+sim:/challenge/vi_up_vld
+force -freeze sim:/challenge/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/challenge/a 09.87 0
+# Invalid binary digit: 9.
+# ** UI-Msg: (vsim-4011) Invalid force value: 09.87 0.
+# 
+force -deposit sim:/challenge/b 8674.3 0
+# Invalid binary digit: 8.
+# ** UI-Msg: (vsim-4011) Invalid force value: 8674.3 0.
+# 
+force -freeze sim:/challenge/c 9.453 0
+# Invalid binary digit: 9.
+# ** UI-Msg: (vsim-4011) Invalid force value: 9.453 0.
+# 
+run -all
+force -deposit sim:/challenge/a 8.765 0
+# Invalid binary digit: 8.
+# ** UI-Msg: (vsim-4011) Invalid force value: 8.765 0.
+# 
+add dataflow \
+sim:/challenge/b 
+# WARNING: No extended dataflow license exists
+# No drivers or ports for b
+noforce sim:/challenge/a
+run
+quit -sim
+# End time: 16:13:35 on Dec 14,2025, Elapsed time: 4:43:17
+# Errors: 0, Warnings: 88
+vsim work.challenge
+# vsim work.challenge 
+# Start time: 16:23:30 on Dec 14,2025
+# Loading sv_std.std
+# Loading work.challenge
+# Loading work.f_mult_sv_unit
+# Loading work.f_mult
+# Loading work.wally_fpu_sv_unit
+# Loading work.wally_fpu
+# Loading work.fctrl_sv_unit
+# Loading work.fctrl
+# Loading work.flopenrc
+# Loading work.flopenr
+# Loading work.fhazard
+# Loading work.mux3
+# Loading work.mux2
+# Loading work.unpack_sv_unit
+# Loading work.unpack
+# Loading work.unpackinput_sv_unit
+# Loading work.unpackinput
+# Loading work.fmtparams_sv_unit
+# Loading work.fmtparams
+# Loading work.fma_sv_unit
+# Loading work.fma
+# Loading work.fmaexpadd_sv_unit
+# Loading work.fmaexpadd
+# Loading work.fmamult_sv_unit
+# Loading work.fmamult
+# Loading work.fmasign
+# Loading work.fmaalign_sv_unit
+# Loading work.fmaalign
+# Loading work.fmaadd_sv_unit
+# Loading work.fmaadd
+# Loading work.fmalza
+# Loading work.lzc
+# Loading work.fdivsqrt_sv_unit
+# Loading work.fdivsqrt
+# Loading work.fdivsqrtpreproc_sv_unit
+# Loading work.fdivsqrtpreproc
+# Loading work.flopen
+# Loading work.fdivsqrtexpcalc_sv_unit
+# Loading work.fdivsqrtexpcalc
+# Loading work.fdivsqrtcycles_sv_unit
+# Loading work.fdivsqrtcycles
+# Loading work.fdivsqrtfsm_sv_unit
+# Loading work.fdivsqrtfsm
+# Loading work.fdivsqrtiter_sv_unit
+# Loading work.fdivsqrtiter
+# Loading work.fdivsqrtpostproc_sv_unit
+# Loading work.fdivsqrtpostproc
+# Loading work.aplusbeq0
+# Loading work.fcmp_sv_unit
+# Loading work.fcmp
+# Loading work.fsgninj_sv_unit
+# Loading work.fsgninj
+# Loading work.fclassify_sv_unit
+# Loading work.fclassify
+# Loading work.fcvt_sv_unit
+# Loading work.fcvt
+# Loading work.mux4
+# Loading work.postprocess_sv_unit
+# Loading work.postprocess
+# Loading work.cvtshiftcalc_sv_unit
+# Loading work.cvtshiftcalc
+# Loading work.fmashiftcalc_sv_unit
+# Loading work.fmashiftcalc
+# Loading work.divshiftcalc_sv_unit
+# Loading work.divshiftcalc
+# Loading work.normshift_sv_unit
+# Loading work.normshift
+# Loading work.shiftcorrection_sv_unit
+# Loading work.shiftcorrection
+# Loading work.roundsign
+# Loading work.round_sv_unit
+# Loading work.round
+# Loading work.resultsign
+# Loading work.flags_sv_unit
+# Loading work.flags
+# Loading work.negateintres_sv_unit
+# Loading work.negateintres
+# Loading work.specialcase_sv_unit
+# Loading work.specialcase
+# Loading work.shift_register_with_valid
+# Loading work.f_add_sv_unit
+# Loading work.f_add
+# Loading work.fdivsqrtstage4_sv_unit
+# Loading work.fdivsqrtstage4
+# Loading work.fdivsqrtuslc4cmp
+# Loading work.fdivsqrtfgen4_sv_unit
+# Loading work.fdivsqrtfgen4
+# Loading work.csa
+# Loading work.fdivsqrtuotfc4_sv_unit
+# Loading work.fdivsqrtuotfc4
+# Loading work.fround_sv_unit
+# Loading work.fround
+# Loading work.packoutput_sv_unit
+# Loading work.packoutput
+# Loading work.fli_sv_unit
+# Loading work.fli
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_i/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv Line: 40
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_ii/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv Line: 40
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_iii/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv Line: 40
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_iv/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv Line: 40
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_b_mult/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv Line: 40
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_mult.sv(40): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_ab/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'SetFflagsM'. The port definition is at: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/wally_fpu.sv(46).
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_ab/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv Line: 44
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_fpu'.  Expected 23, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_ab_and_c/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (1) for port 'SetFflagsM'. The port definition is at: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/wally_fpu.sv(46).
+#    Time: 0 ps  Iteration: 0  Instance: /challenge/inst_ab_and_c/i_fpu File: /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv Line: 44
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FPUStallD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FWriteIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntE'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FRegWriteM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FpLoadStoreM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FWriteDataM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FIntResM'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'IllegalFPUInstrD'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntResW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FCvtIntW'.
+# ** Warning: (vsim-3722) /home/ishfisav/Desktop/rtl_Levels/07_systemverilog-microarchitecture-challenge-for-ai-1-main/arithmetic_block_wrappers/f_add.sv(44): [TFMPC] - Missing connection for port 'FIntDivResultW'.
+# ** Warning: Design size of 17043 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# WARNING: No extended dataflow license exists
+force -deposit sim:/challenge/a 89.765 0
+# Invalid binary digit: 8.
+# ** UI-Msg: (vsim-4011) Invalid force value: 89.765 0.
+# 
+force -deposit sim:/challenge/b 987.5 0
+# Invalid binary digit: 9.
+# ** UI-Msg: (vsim-4011) Invalid force value: 987.5 0.
+# 
+force -deposit sim:/challenge/c 764.34 0
+# Invalid binary digit: 7.
+# ** UI-Msg: (vsim-4011) Invalid force value: 764.34 0.
+# 
+add dataflow  \
+sim:/challenge/FLEN \
+sim:/challenge/clk \
+sim:/challenge/rst \
+sim:/challenge/arg_vld \
+sim:/challenge/a \
+sim:/challenge/b \
+sim:/challenge/c \
+sim:/challenge/res_vld \
+sim:/challenge/res \
+sim:/challenge/a_square \
+sim:/challenge/a_square_Q \
+sim:/challenge/a_i_Q \
+sim:/challenge/a_square_vld \
+sim:/challenge/a_square_vld_Q \
+sim:/challenge/arg_vld_Q \
+sim:/challenge/a_cubed \
+sim:/challenge/a_cubed_Q \
+sim:/challenge/a_ii_Q \
+sim:/challenge/ii_up_valid \
+sim:/challenge/a_cubed_vld \
+sim:/challenge/a_cubed_vld_Q \
+sim:/challenge/a_ii_Q_vld \
+sim:/challenge/a_fourth \
+sim:/challenge/a_fourth_Q \
+sim:/challenge/a_iii_Q \
+sim:/challenge/iii_up_valid \
+sim:/challenge/a_fourth_vld \
+sim:/challenge/a_fourth_vld_Q \
+sim:/challenge/a_iii_vld_Q \
+sim:/challenge/a_fifth \
+sim:/challenge/a_fifth_Q \
+sim:/challenge/a_fifth_vld \
+sim:/challenge/iv_up_valid \
+sim:/challenge/a_fifth_vld_Q \
+sim:/challenge/b_shifted \
+sim:/challenge/b_shifted_Q \
+sim:/challenge/b_shifted_vld \
+sim:/challenge/b_shifted_vld_Q \
+sim:/challenge/b_mult \
+sim:/challenge/b_mult_Q \
+sim:/challenge/b_mult_vld \
+sim:/challenge/b_mult_vld_Q \
+sim:/challenge/ab_sum \
+sim:/challenge/ab_sum_Q \
+sim:/challenge/ab_sum_vld \
+sim:/challenge/v_up_valid \
+sim:/challenge/v_down_vld \
+sim:/challenge/v_down_vld_Q \
+sim:/challenge/v_up_vld \
+sim:/challenge/c_shifted_Q \
+sim:/challenge/c_shifted \
+sim:/challenge/c_shifted_vld \
+sim:/challenge/c_shifted_vld_Q \
+sim:/challenge/vi_up_vld
+# WARNING: No extended dataflow license exists
+# No drivers or ports for FLEN
+# No drivers or ports for clk
+# No drivers or ports for rst
+# No drivers or ports for arg_vld
+# No drivers or ports for a
+# No drivers or ports for b
+# No drivers or ports for c
+# No drivers or ports for res_vld
+# No drivers or ports for res
+# No drivers or ports for 41 additional signals omitted for message brevity.
+add wave -position insertpoint  \
+sim:/challenge/FLEN \
+sim:/challenge/clk \
+sim:/challenge/rst \
+sim:/challenge/arg_vld \
+sim:/challenge/a \
+sim:/challenge/b \
+sim:/challenge/c \
+sim:/challenge/res_vld \
+sim:/challenge/res \
+sim:/challenge/a_square \
+sim:/challenge/a_square_Q \
+sim:/challenge/a_i_Q \
+sim:/challenge/a_square_vld \
+sim:/challenge/a_square_vld_Q \
+sim:/challenge/arg_vld_Q \
+sim:/challenge/a_cubed \
+sim:/challenge/a_cubed_Q \
+sim:/challenge/a_ii_Q \
+sim:/challenge/ii_up_valid \
+sim:/challenge/a_cubed_vld \
+sim:/challenge/a_cubed_vld_Q \
+sim:/challenge/a_ii_Q_vld \
+sim:/challenge/a_fourth \
+sim:/challenge/a_fourth_Q \
+sim:/challenge/a_iii_Q \
+sim:/challenge/iii_up_valid \
+sim:/challenge/a_fourth_vld \
+sim:/challenge/a_fourth_vld_Q \
+sim:/challenge/a_iii_vld_Q \
+sim:/challenge/a_fifth \
+sim:/challenge/a_fifth_Q \
+sim:/challenge/a_fifth_vld \
+sim:/challenge/iv_up_valid \
+sim:/challenge/a_fifth_vld_Q \
+sim:/challenge/b_shifted \
+sim:/challenge/b_shifted_Q \
+sim:/challenge/b_shifted_vld \
+sim:/challenge/b_shifted_vld_Q \
+sim:/challenge/b_mult \
+sim:/challenge/b_mult_Q \
+sim:/challenge/b_mult_vld \
+sim:/challenge/b_mult_vld_Q \
+sim:/challenge/ab_sum \
+sim:/challenge/ab_sum_Q \
+sim:/challenge/ab_sum_vld \
+sim:/challenge/v_up_valid \
+sim:/challenge/v_down_vld \
+sim:/challenge/v_down_vld_Q \
+sim:/challenge/v_up_vld \
+sim:/challenge/c_shifted_Q \
+sim:/challenge/c_shifted \
+sim:/challenge/c_shifted_vld \
+sim:/challenge/c_shifted_vld_Q \
+sim:/challenge/vi_up_vld
+add wave -position insertpoint  \
+sim:/challenge/FLEN \
+sim:/challenge/clk \
+sim:/challenge/rst \
+sim:/challenge/arg_vld \
+sim:/challenge/a \
+sim:/challenge/b \
+sim:/challenge/c \
+sim:/challenge/res_vld \
+sim:/challenge/res \
+sim:/challenge/a_square \
+sim:/challenge/a_square_Q \
+sim:/challenge/a_i_Q \
+sim:/challenge/a_square_vld \
+sim:/challenge/a_square_vld_Q \
+sim:/challenge/arg_vld_Q \
+sim:/challenge/a_cubed \
+sim:/challenge/a_cubed_Q \
+sim:/challenge/a_ii_Q \
+sim:/challenge/ii_up_valid \
+sim:/challenge/a_cubed_vld \
+sim:/challenge/a_cubed_vld_Q \
+sim:/challenge/a_ii_Q_vld \
+sim:/challenge/a_fourth \
+sim:/challenge/a_fourth_Q \
+sim:/challenge/a_iii_Q \
+sim:/challenge/iii_up_valid \
+sim:/challenge/a_fourth_vld \
+sim:/challenge/a_fourth_vld_Q \
+sim:/challenge/a_iii_vld_Q \
+sim:/challenge/a_fifth \
+sim:/challenge/a_fifth_Q \
+sim:/challenge/a_fifth_vld \
+sim:/challenge/iv_up_valid \
+sim:/challenge/a_fifth_vld_Q \
+sim:/challenge/b_shifted \
+sim:/challenge/b_shifted_Q \
+sim:/challenge/b_shifted_vld \
+sim:/challenge/b_shifted_vld_Q \
+sim:/challenge/b_mult \
+sim:/challenge/b_mult_Q \
+sim:/challenge/b_mult_vld \
+sim:/challenge/b_mult_vld_Q \
+sim:/challenge/ab_sum \
+sim:/challenge/ab_sum_Q \
+sim:/challenge/ab_sum_vld \
+sim:/challenge/v_up_valid \
+sim:/challenge/v_down_vld \
+sim:/challenge/v_down_vld_Q \
+sim:/challenge/v_up_vld \
+sim:/challenge/c_shifted_Q \
+sim:/challenge/c_shifted \
+sim:/challenge/c_shifted_vld \
+sim:/challenge/c_shifted_vld_Q \
+sim:/challenge/vi_up_vld
+run -continue
+force -freeze sim:/challenge/clk 1 0, 0 {50 ps} -r 100
+# Load canceled
+run
+# End time: 21:15:09 on Dec 14,2025, Elapsed time: 4:51:39
+# Errors: 0, Warnings: 89

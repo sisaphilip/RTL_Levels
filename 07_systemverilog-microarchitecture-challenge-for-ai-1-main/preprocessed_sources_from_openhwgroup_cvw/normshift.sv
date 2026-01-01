@@ -71,6 +71,9 @@
     //      | Nf 0's |           Qm           | << calculated shift amount
     //        .
 
+
+`include "config.vh"
+
 module normshift (
   input  logic [  LOGNORMSHIFTSZ-1:0]  ShiftAmt,   // shift amount
   input  logic [  NORMSHIFTSZ-1:0]     ShiftIn,    // number to be shifted

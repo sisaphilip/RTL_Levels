@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
+
 module flags (
   input  logic                 Xs,                     // X sign
   input  logic [  FMTBITS-1:0] OutFmt,                 // output format

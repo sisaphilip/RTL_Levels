@@ -27,6 +27,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module fdivsqrtexpcalc (
   input  logic [  NE-2:0]      Bias,      // Bias of exponent
   input  logic [  NE-1:0]      Xe, Ye,    // input exponents

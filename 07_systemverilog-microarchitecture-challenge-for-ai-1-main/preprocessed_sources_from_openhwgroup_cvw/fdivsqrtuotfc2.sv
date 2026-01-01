@@ -30,6 +30,11 @@
 ///////////////////////////////
 // Unified OTFC, Radix 2 //
 ///////////////////////////////
+
+
+
+`include "config.vh"
+
 module fdivsqrtuotfc2 (
   input  logic             up, un,
   input  logic [  DIVb+1:0] C,                // Q2.DIVb
@@ -55,3 +60,5 @@ module fdivsqrtuotfc2 (
     end
   end
 endmodule
+
+

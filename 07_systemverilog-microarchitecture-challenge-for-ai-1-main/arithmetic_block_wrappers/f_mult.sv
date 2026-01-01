@@ -1,3 +1,8 @@
+
+
+
+`include "config.vh"
+
 module f_mult (
     input               clk,
     input               rst,

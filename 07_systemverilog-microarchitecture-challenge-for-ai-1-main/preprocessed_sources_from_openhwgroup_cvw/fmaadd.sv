@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+`include "config.vh"
+
 module fmaadd (
   input  logic [3*  NF+5:0]    Am,         // aligned addend's mantissa for addition in U(NF+5.2NF+1)
   input  logic [  NE-1:0]      Ze,         // exponent of Z

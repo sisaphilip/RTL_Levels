@@ -2,7 +2,7 @@
 `define max(a,b) (((a) > (b)) ? (a) : (b))
 
 // constants defining different privilege modes
-// defined in Table 1.1 of the privileged spec
+// defined in Table  1.1 of the privileged spec
 localparam M_MODE  = (2'b11);
 localparam S_MODE  = (2'b01);
 localparam U_MODE  = (2'b00);
@@ -43,26 +43,26 @@ localparam PMPCFG_ENTRIES = (PMP_ENTRIES/32'd8);
 // Floating point constants for Quad, Double, Single, and Half precisions
 // Lim: I've made some of these 64 bit to avoid width warnings.
 // If errors crop up, try downsizing back to 32.
-localparam Q_LEN = 32'd128;
-localparam Q_NE = 32'd15;
-localparam Q_NF = 32'd112;
+localparam Q_LEN  = 32'd128;
+localparam Q_NE   = 32'd15;
+localparam Q_NF   = 32'd112;
 localparam Q_BIAS = 32'd16383;
-localparam Q_FMT = 2'd3;
-localparam D_LEN = 32'd64;
-localparam D_NE = 32'd11;
-localparam D_NF = 32'd52;
+localparam Q_FMT  = 2'd3;
+localparam D_LEN  = 32'd64;
+localparam D_NE   = 32'd11;
+localparam D_NF   = 32'd52;
 localparam D_BIAS = 32'd1023;
-localparam D_FMT = 2'd1;
-localparam S_LEN = 32'd32;
-localparam S_NE = 32'd8;
-localparam S_NF = 32'd23;
+localparam D_FMT  = 2'd1;
+localparam S_LEN  = 32'd32;
+localparam S_NE   = 32'd8;
+localparam S_NF   = 32'd23;
 localparam S_BIAS = 32'd127;
-localparam S_FMT = 2'd0;
-localparam H_LEN = 32'd16;
-localparam H_NE = 32'd5;
-localparam H_NF = 32'd10;
+localparam S_FMT  = 2'd0;
+localparam H_LEN  = 32'd16;
+localparam H_NE   = 32'd5;
+localparam H_NF   = 32'd10;
 localparam H_BIAS = 32'd15;
-localparam H_FMT = 2'd2;
+localparam H_FMT  = 2'd2;
 
 // Floating point length FLEN and number of exponent (NE) and fraction (NF) bits (for longest format supported)
 localparam FLEN = Q_SUPPORTED ? Q_LEN  : D_SUPPORTED ? D_LEN  : S_LEN;
@@ -111,7 +111,11 @@ localparam INTDIVb        = INTFPDUR*RK - LOGR;
 
 // largest length in IEU/FPU
 localparam BASECVTLEN = `max(XLEN, NF); // convert length excluding Zfa fcvtmod.w.d
-localparam CVTLEN = (ZFA_SUPPORTED & D_SUPPORTED) ? `max(BASECVTLEN, 32'd84) : BASECVTLEN; // fcvtmod.w.d needs at least 32+52 because a double with 52 fractional bits might be into upper bits of 32 bit word
+localparam CVTLEN = (ZFA_SUPPORTED & D_SUPPORTED) ? `max(BASECVTLEN, 32'd84) : BASECVTLEN;
+// fcvtmod.w.d needs at least 32+52 because a double with 52
+//fractional bits might be into upper bits of 32 bit word
+
+
 localparam LLEN = `max($unsigned(FLEN), $unsigned(XLEN));
 localparam LOGCVTLEN = $unsigned($clog2(CVTLEN+1));
 

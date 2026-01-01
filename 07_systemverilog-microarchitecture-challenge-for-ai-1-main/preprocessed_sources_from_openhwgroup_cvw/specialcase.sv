@@ -27,6 +27,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module specialcase (
   input  logic                 Xs,                // X sign
   input  logic [  NF:0]        Xm, Ym, Zm,        // input significand's

@@ -28,6 +28,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module fmtparams (
   input  logic [  FMTBITS-1:0] Fmt,
   output logic [  NE-2:0]      Bias,

@@ -27,6 +27,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module fmaexpadd (
   input  logic [  NE-1:0]      Xe, Ye,         // input's exponents
   input  logic                 XZero, YZero,   // are the inputs zero

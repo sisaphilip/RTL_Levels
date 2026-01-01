@@ -27,6 +27,8 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
 module wally_fpu (
   input  logic                 clk,
   input  logic                 reset,

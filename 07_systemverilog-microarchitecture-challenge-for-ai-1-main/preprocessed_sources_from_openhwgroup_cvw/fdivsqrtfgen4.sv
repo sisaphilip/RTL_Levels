@@ -27,6 +27,9 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+`include "config.vh"
+
 module fdivsqrtfgen4 (
   input  logic [3:0]        udigit,           // {2, 1, -1, -2}; all cold for zero
   input  logic [  DIVb+3:0] C, U, UM,         // Q4.DIVb (extended from shorter forms)

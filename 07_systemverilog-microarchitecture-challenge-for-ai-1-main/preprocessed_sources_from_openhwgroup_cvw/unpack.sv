@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+`include "config.vh"
+
 module unpack (
   input  logic [  FLEN-1:0]       X, Y, Z,              // inputs from register file
   input  logic [  FMTBITS-1:0]    Fmt,                  // format signal 00 - single 01 - double 11 - quad 10 - half

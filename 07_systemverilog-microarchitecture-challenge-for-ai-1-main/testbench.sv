@@ -422,13 +422,13 @@ module testbench;
         end
         else
         begin
-            n_cycles <= n_cycles + 1'd1;
+               n_cycles <= n_cycles + 1'd1;
 
             if (arg_vld)
-                arg_cnt <= arg_cnt + 1'd1;
+                arg_cnt <= arg_cnt  + 1'd1;
 
             if (res_vld)
-                res_cnt <= res_cnt + 1'd1;
+                res_cnt <= res_cnt  + 1'd1;
         end
 
     //----------------------------------------------------------------------

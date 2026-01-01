@@ -27,6 +27,10 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+`include "config.vh"
+
 module fdivsqrtcycles (
   input  logic [  LOGFLEN-1:0] Nf,          // Number of fractional bits in selected format
   input  logic                 IntDivE,
